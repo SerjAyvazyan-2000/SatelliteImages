@@ -60,28 +60,14 @@ function updatePhotoHeroStyle() {
     const allItems = document.querySelectorAll(".photo-style-item");
 
     allItems.forEach((item) => {
-        const lowQuality = item.getAttribute("data-low");
-        const highQuality = item.getAttribute("data-high");
-        const styleName = item.querySelector(".photo-style-name p");
 
         const slide = item.closest(".swiper-slide");
         if (slide.classList.contains("swiper-slide-active")) {
-            // Применяем плавную смену изображения
-            item.classList.add('hidden');  // Скрываем старое изображение
-            styleName.textContent = "Результат";
+            item.classList.add('active');
 
-            // Обновляем фоновое изображение
-            setTimeout(() => {
-                if (highQuality) {
-                    item.style.backgroundImage = `url('${highQuality}')`;
-                }
-                item.classList.remove('hidden');
-            }, 300);
         } else {
-            if (lowQuality) {
-                styleName.textContent = "Оригинал";
-                item.style.backgroundImage = `url('${lowQuality}')`;
-            }
+            item.classList.remove('active');
+
         }
     });
 }
@@ -136,25 +122,27 @@ function updateImproveHeroStyle() {
 
         const slide = item.closest(".swiper-slide");
         if (slide.classList.contains("swiper-slide-active")) {
-            // Устанавливаем текст "Результат" для активного слайда
-            setTimeout(() => {
-                cardName.textContent = "Результат";
-            }, 300);
+            item.classList.add("active");
+
+            // setTimeout(() => {
+            //     cardName.textContent = "Результат";
+            // }, 300);
 
             // Обновляем фон плавно
-            item.classList.add("hidden");
-            setTimeout(() => {
-                if (highQuality) {
-                    item.style.backgroundImage = `url('${highQuality}')`;
-                }
-                item.classList.remove("hidden");
-            }, 300);
+            // setTimeout(() => {
+            //     if (highQuality) {
+            //         item.style.backgroundImage = `url('${highQuality}')`;
+            //
+            //     }
+            // }, 300);
         } else {
-            // Возвращаем текст "Оригинал" для неактивных слайдов
-            cardName.textContent = "Оригинал";
-            if (lowQuality) {
-                item.style.backgroundImage = `url('${lowQuality}')`;
-            }
+            // cardName.textContent = "Оригинал";
+            item.classList.remove("active");
+            //
+            // if (lowQuality) {
+            //     item.style.backgroundImage = `url('${lowQuality}')`;
+            //
+            // }
         }
     });
 }
@@ -246,8 +234,6 @@ function initSwiper() {
         },
 
     });
-
-
     const swiperContainer = document.querySelector(".reviews-swiper");
 
     swiperContainer.addEventListener("mouseenter", () => {
@@ -257,12 +243,12 @@ function initSwiper() {
     swiperContainer.addEventListener("mouseleave", () => {
         reviewsSwiper.autoplay.start();
     });
-
 }
 
 
 window.addEventListener("resize", initSwiper);
 initSwiper();
+
 
 
 

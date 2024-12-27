@@ -95,14 +95,44 @@
     height: 256px;
 
 }
-
-.improve-card-name p {
-    transition: opacity 0.3s ease;
+.improve-high-img{
+    display: none;
+}
+.result{
+    display: none;
+}
+.swiper-slide-active .improve-high-img{
+    display: block;
+}
+.swiper-slide-active .improve-low-img{
+    display: none;
+}
+.improve-card-images img{
+    max-width: 256px;
+    width: 100%;
+    height: 256px;
+    object-fit: cover;
+    border-radius: 16px;
+}
+.swiper-slide-prev .improve-high-img{
+    display: block;
+}
+.swiper-slide-prev .improve-low-img{
+    display: none;
+}
+.swiper-slide-active .result{
+    display: block;
+}
+.swiper-slide-active .original{
+    display: none;
+}
+.swiper-slide-prev .result{
+    display: block;
+}
+.swiper-slide-prev .original{
+    display: none;
 }
 
-.improve-card-name p.hidden {
-    opacity: 0;
-}
 
 .improve-mockup-title {
     margin-top: 20px;
@@ -315,6 +345,10 @@
         width: 100%;
         height: 198px;
 
+    }
+    .improve-card-images img{
+        max-width: 198px;
+        height: 198px;
     }
 
     .improve-peculiarities-cnt {
