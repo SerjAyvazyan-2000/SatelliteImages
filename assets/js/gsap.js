@@ -226,173 +226,173 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 
-document.addEventListener("DOMContentLoaded", () => {
-    gsap.registerPlugin(ScrollTrigger);
-
-    const initAnimationFace = () => {
-        const timeline = gsap.timeline({
-            scrollTrigger: {
-                trigger: '.face-pin-content',
-                start: 'top 10%',
-                end: '+=700',
-                scrub: true,
-                pin: true,
-                anticipatePin: 1,
-            }
-        });
-
-        gsap.to('.face-peculiarities-item--one', {
-            scrollTrigger: {
-                trigger: '.face-peculiarities-item--one',
-                start: 'top center',
-                end: '+=500',
-                scrub: true,
-            },
-            yPercent: -250,
-            ease: 'power1.inOut',
-            duration: 2,
-        });
-
-        // gsap.fromTo(
-        //     '.face-peculiarities-item--tree',
-        //     { opacity: 0 },
-        //     {
-        //         scrollTrigger: {
-        //             trigger: '.face-peculiarities-item--tree', // Триггер для первой карточки
-        //             start: 'top 20%', // Начать выравнивание чуть раньше
-        //             end: 'top center', // Завершить выравнивание
-        //             scrub: true,
-        //             ease: 'power1.inOut',
-        //
-        //         },
-        //         opacity: 1,
-        //     }
-        // );
-
-        gsap.to('.face-peculiarities-item--tree', {
-            scrollTrigger: {
-                trigger: '.face-peculiarities-item--tree',
-                start: 'top center-=300',
-                end: '+=500',
-                scrub: true,
-            },
-            yPercent: -250,
-            ease: 'power1.inOut',
-            duration: 2,
-        });
-
-
-        // gsap.fromTo(
-        //     '.face-peculiarities-item--two',
-        //     { opacity: 0 },
-        //     {
-        //         scrollTrigger: {
-        //             trigger: '.face-peculiarities-item--tree', // Триггер для первой карточки
-        //             start: 'top 10%', // Начать выравнивание чуть раньше
-        //             end: 'top center', // Завершить выравнивание
-        //             scrub: true,
-        //             ease: 'power1.inOut',
-        //
-        //         },
-        //         opacity: 1,
-        //     }
-        // );
-
-        gsap.to('.face-peculiarities-item--two', {
-            scrollTrigger: {
-                trigger: '.face-peculiarities-item--tree',
-                start: 'top center-=600',
-                end: '+=500',
-                scrub: true,
-            },
-            yPercent: -250,
-            ease: 'power1.inOut',
-            duration: 2,
-        });
-    };
-
-    const initAnimationFaceMobile = () => {
-        const timeline = gsap.timeline({
-            scrollTrigger: {
-                trigger: '.face-pin-content',
-                start: 'top 10%',
-                end: '+=300',
-                scrub: true,
-                pin: true,
-                anticipatePin: 1,
-            }
-        });
-
-        gsap.to('.face-peculiarities-item--one', {
-            scrollTrigger: {
-                trigger: '.face-peculiarities-item--one',
-                start: 'top center',
-                end: '+=300',
-                scrub: true,
-            },
-            yPercent: -250,
-            ease: 'power1.inOut',
-            duration: 2,
-        });
-
-
-        gsap.to('.face-peculiarities-item--tree', {
-            scrollTrigger: {
-                trigger: '.face-peculiarities-item--tree',
-                start: 'top center-=200',
-                end: '+=300',
-                scrub: true,
-            },
-            yPercent: -250,
-            ease: 'power1.inOut',
-            duration: 2,
-        });
-
-
-
-        gsap.to('.face-peculiarities-item--two', {
-            scrollTrigger: {
-                trigger: '.face-peculiarities-item--two',
-                start: 'top center-=400',
-                end: '+=300',
-                scrub: true,
-            },
-            yPercent: -250,
-            ease: 'power1.inOut',
-            duration: 2,
-        });
-    };
-
-
-    ScrollTrigger.matchMedia({
-        "(min-width: 769px)": () => {
-            // const animationTriggers = initAnimationFace(); // Сохраняем триггеры
-            initAnimationFace()
-            ScrollTrigger.matchMedia({
-                "(max-width: 768px)": () => {
-                    // Удаляем только триггеры `initAnimationFace`
-                    // animationTriggers.forEach(trigger => trigger.kill());
-
-
-                }
-            });
-        },
-        "(max-width: 768px)": () => {
-            ScrollTrigger.matchMedia({
-                "(max-width: 768px)": () => {
-                    initAnimationFaceMobile()
-                }
-            });
-
-        }
-    });
-    window.addEventListener('resize', () => {
-        ScrollTrigger.getAll().forEach(trigger => trigger.kill());
-        initAnimationFace();
-    });
-
-
-});
+// document.addEventListener("DOMContentLoaded", () => {
+//     gsap.registerPlugin(ScrollTrigger);
+//
+//     const initAnimationFace = () => {
+//         const timeline = gsap.timeline({
+//             scrollTrigger: {
+//                 trigger: '.face-pin-content',
+//                 start: 'top 10%',
+//                 end: '+=700',
+//                 scrub: true,
+//                 pin: true,
+//                 anticipatePin: 1,
+//             }
+//         });
+//
+//         gsap.to('.face-peculiarities-item--one', {
+//             scrollTrigger: {
+//                 trigger: '.face-peculiarities-item--one',
+//                 start: 'top center',
+//                 end: '+=500',
+//                 scrub: true,
+//             },
+//             yPercent: -250,
+//             ease: 'power1.inOut',
+//             duration: 2,
+//         });
+//
+//         // gsap.fromTo(
+//         //     '.face-peculiarities-item--tree',
+//         //     { opacity: 0 },
+//         //     {
+//         //         scrollTrigger: {
+//         //             trigger: '.face-peculiarities-item--tree', // Триггер для первой карточки
+//         //             start: 'top 20%', // Начать выравнивание чуть раньше
+//         //             end: 'top center', // Завершить выравнивание
+//         //             scrub: true,
+//         //             ease: 'power1.inOut',
+//         //
+//         //         },
+//         //         opacity: 1,
+//         //     }
+//         // );
+//
+//         gsap.to('.face-peculiarities-item--tree', {
+//             scrollTrigger: {
+//                 trigger: '.face-peculiarities-item--tree',
+//                 start: 'top center-=300',
+//                 end: '+=500',
+//                 scrub: true,
+//             },
+//             yPercent: -250,
+//             ease: 'power1.inOut',
+//             duration: 2,
+//         });
+//
+//
+//         // gsap.fromTo(
+//         //     '.face-peculiarities-item--two',
+//         //     { opacity: 0 },
+//         //     {
+//         //         scrollTrigger: {
+//         //             trigger: '.face-peculiarities-item--tree', // Триггер для первой карточки
+//         //             start: 'top 10%', // Начать выравнивание чуть раньше
+//         //             end: 'top center', // Завершить выравнивание
+//         //             scrub: true,
+//         //             ease: 'power1.inOut',
+//         //
+//         //         },
+//         //         opacity: 1,
+//         //     }
+//         // );
+//
+//         gsap.to('.face-peculiarities-item--two', {
+//             scrollTrigger: {
+//                 trigger: '.face-peculiarities-item--tree',
+//                 start: 'top center-=600',
+//                 end: '+=500',
+//                 scrub: true,
+//             },
+//             yPercent: -250,
+//             ease: 'power1.inOut',
+//             duration: 2,
+//         });
+//     };
+//
+//     const initAnimationFaceMobile = () => {
+//         const timeline = gsap.timeline({
+//             scrollTrigger: {
+//                 trigger: '.face-pin-content',
+//                 start: 'top 10%',
+//                 end: '+=300',
+//                 scrub: true,
+//                 pin: true,
+//                 anticipatePin: 1,
+//             }
+//         });
+//
+//         gsap.to('.face-peculiarities-item--one', {
+//             scrollTrigger: {
+//                 trigger: '.face-peculiarities-item--one',
+//                 start: 'top center',
+//                 end: '+=300',
+//                 scrub: true,
+//             },
+//             yPercent: -250,
+//             ease: 'power1.inOut',
+//             duration: 2,
+//         });
+//
+//
+//         gsap.to('.face-peculiarities-item--tree', {
+//             scrollTrigger: {
+//                 trigger: '.face-peculiarities-item--tree',
+//                 start: 'top center-=200',
+//                 end: '+=300',
+//                 scrub: true,
+//             },
+//             yPercent: -250,
+//             ease: 'power1.inOut',
+//             duration: 2,
+//         });
+//
+//
+//
+//         gsap.to('.face-peculiarities-item--two', {
+//             scrollTrigger: {
+//                 trigger: '.face-peculiarities-item--two',
+//                 start: 'top center-=400',
+//                 end: '+=300',
+//                 scrub: true,
+//             },
+//             yPercent: -250,
+//             ease: 'power1.inOut',
+//             duration: 2,
+//         });
+//     };
+//
+//
+//     ScrollTrigger.matchMedia({
+//         "(min-width: 769px)": () => {
+//             // const animationTriggers = initAnimationFace(); // Сохраняем триггеры
+//             initAnimationFace()
+//             ScrollTrigger.matchMedia({
+//                 "(max-width: 768px)": () => {
+//                     // Удаляем только триггеры `initAnimationFace`
+//                     // animationTriggers.forEach(trigger => trigger.kill());
+//
+//
+//                 }
+//             });
+//         },
+//         "(max-width: 768px)": () => {
+//             ScrollTrigger.matchMedia({
+//                 "(max-width: 768px)": () => {
+//                     initAnimationFaceMobile()
+//                 }
+//             });
+//
+//         }
+//     });
+//     window.addEventListener('resize', () => {
+//         ScrollTrigger.getAll().forEach(trigger => trigger.kill());
+//         initAnimationFace();
+//     });
+//
+//
+// });
 
 
 

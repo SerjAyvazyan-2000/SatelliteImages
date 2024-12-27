@@ -115,6 +115,14 @@
     box-shadow: 0px 0px 32px 0px rgba(99, 86, 254, 0.12);
     z-index: 2;
     height: auto;
+    transition: .8s;
+    transform: translateY(200px);
+    opacity: 0;
+
+}
+.face-peculiarities-item.active{
+    transform: translateX(0);
+    opacity: 1;
 
 }
 
@@ -134,26 +142,23 @@
 }
 
 .face-peculiarities-item--one {
-    bottom: 20%;
+    bottom: 50%;
     left: 0;
     will-change: transform;
-    transition: .3s;
 
 }
 
 .face-peculiarities-item--two {
-    bottom: 20%;
+    bottom: 30%;
     right: 0;
     will-change: transform;
-    transition: .3s;
 }
 
 .face-peculiarities-item--tree {
-    bottom: 20%;
-    left: 50%;
+    bottom: 10%;
+    left: 35%;
     transform: translate(-50%);
     z-index: 3;
-    transition: .3s;
     will-change: transform;
 }
 
@@ -226,7 +231,10 @@
 }
 
 @media (max-width: 1200px) {
+    .face-peculiarities-item--tree {
+        left: 5%;
 
+    }
 
 }
 

@@ -246,21 +246,25 @@ function initSwiper() {
         },
 
     });
+
+
+    const swiperContainer = document.querySelector(".reviews-swiper");
+
+    swiperContainer.addEventListener("mouseenter", () => {
+        reviewsSwiper.autoplay.stop();
+    });
+
+    swiperContainer.addEventListener("mouseleave", () => {
+        reviewsSwiper.autoplay.start();
+    });
+
 }
 
-initSwiper();
 
 window.addEventListener("resize", initSwiper);
+initSwiper();
 
-const swiperContainer = document.querySelector(".reviews-swiper");
 
-swiperContainer.addEventListener("mouseenter", () => {
-    reviewsSwiper.autoplay.stop();
-});
-
-swiperContainer.addEventListener("mouseleave", () => {
-    reviewsSwiper.autoplay.start();
-});
 
 
 let advantagesSwiper = new Swiper(".advantages-slider", {
