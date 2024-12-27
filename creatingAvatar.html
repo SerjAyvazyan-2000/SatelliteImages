@@ -1,0 +1,1538 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Creating an Avatar</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/zurb-twentytwenty@0.1.1/css/twentytwenty.min.css">
+
+
+</head>
+<body>
+
+<div class="wrapper">
+    <header class="header">
+        <div class="container">
+            <div class="header-body G-justify-between">
+                <a class="header-logo" href="backgroundRemoval.html">
+                    <img class="logo-desktop" src="assets/images/logo.svg" alt="">
+                    <img class="logo-mobile" src="assets/images/logoMobile.svg" alt="">
+
+                </a>
+                <div class="menu-bg"></div>
+                <nav class="menu">
+                    <div class="menu-mobile-cnt">
+                        <div class="menu-content-mobile G-flex-column">
+                            <h3 class="menu-mobile-title">Satellite AI</h3>
+                            <p class="menu-mobile-clue">
+                                Универсальная платформа
+                                <span class="text-wrap"> для удаление фона c фото</span>
+                                <span class="text-wrap">в один клик</span>
+                            </p>
+                        </div>
+                        <ul class="menu-list G-flex">
+                            <li class='menu-list-item'>
+                                <a class="menu-list-link G-align-center" href="#possibilities">
+                                    <span>Возможности</span>
+                                </a>
+                            </li>
+
+                            <li class="menu-list-item">
+                                <a class="menu-list-link" href="#forWhom">Для кого</a>
+                            </li>
+                            <li class="menu-list-item">
+                                <a class="menu-list-link" href="#reviews">Отзывы</a>
+                            </li>
+                            <li class="menu-list-item">
+                                <a class="menu-list-link" href="#faq">FAQ</a>
+                            </li>
+                        </ul>
+                        <div class="header-mobile-actions ">
+                            <button class="btn-login btn-black ">Вход</button>
+                            <button class="btn-register btn-white  ">Регистрация</button>
+                        </div>
+                    </div>
+
+                </nav>
+                <div class="burger">
+                    <span></span>
+                </div>
+                <div class="header-actions G-align-center">
+                    <button class="btn-login btn-black ">Вход</button>
+                    <button class="btn-register btn-white  ">Регистрация</button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="main">
+        <section class="avatar-hero-section ">
+            <div class="avatar-hero-body  G-flex">
+                <div class="avatar-hero-titles face-hero-titles">
+                    <h1 class="avatar-hero-title hero-title">
+                        Генерация креативных
+                        <span><span class="hero-gradient-text"><span class="hero-gradient-mobile">аватаров</span></span> онлайн</span>
+                    </h1>
+
+                    <p class="avatar-hero-sub hero-sub-title">
+                        Многообразие стилей. Удобный способ
+                        <span class="text-wrap">для быстрого создания уникальных аватаров</span>
+                    </p>
+
+                    <div class="face-btn-cnt">
+                        <div class="face-hero-btn gradient-hover G-align-center">
+                            <button class="btn-main">
+                                Создать аватар
+                            </button>
+                            <a class="icon icon-voice " href=""></a>
+                        </div>
+                    </div>
+
+
+
+                </div>
+                <div style="background-image: url('assets/images/Mocup.png')" class="avatar-hero-style G-image ">
+                    <div data-id="original" style="background-image: url('assets/images/avatarOriginal.png')"
+                         class="avatar-style-item G-image">
+                        <div class="avatar-original-clue">Оригинал</div>
+                    </div>
+                    <div data-id="ufs" style="background-image: url('assets/images/avatarStyle2.png')"
+                         class="avatar-style-item G-image">
+                        <div class="avatar-original-clue">UFC</div>
+                    </div>
+                    <div data-id="gta" style="background-image: url('assets/images/avatarStyle5.png')"
+                         class="avatar-style-item G-image">
+                        <div class="avatar-original-clue">GTA</div>
+                    </div>
+                    <div data-id="cyberpunk" style="background-image: url('assets/images/avatarStyle6.png')"
+                         class="avatar-style-item G-image">
+                        <div class="avatar-original-clue">Киберпанк</div>
+                    </div>
+                    <div data-id="mafia" style="background-image: url('assets/images/avatarStyle7.png')"
+                         class="avatar-style-item G-image">
+                        <div class="avatar-original-clue">Мафия</div>
+                    </div>
+                    <div data-id="angel" style="background-image: url('assets/images/avatarStyle3.png')"
+                         class="avatar-style-item G-image">
+                        <div class="avatar-original-clue">Ангел</div>
+                    </div>
+                    <div data-id="anime" style="background-image: url('assets/images/avatarStyle8.png')"
+                         class="avatar-style-item G-image">
+                        <div class="avatar-original-clue">Аниме</div>
+                    </div>
+                    <div data-id="bride" style="background-image: url('assets/images/avatarStyle9.png')"
+                         class="avatar-style-item G-image">
+                        <div class="avatar-original-clue">Невеста</div>
+                    </div>
+                    <div data-id="middleAges" style="background-image: url('assets/images/avatarStyle10.png')"
+                         class="avatar-style-item G-image">
+                        <div class="avatar-original-clue">Средневековье</div>
+                    </div>
+                    <div data-id="watercolor" style="background-image: url('assets/images/avatarStyle11.png')"
+                         class="avatar-style-item G-image">
+                        <div class="avatar-original-clue">Акварель</div>
+                    </div>
+                    <div data-id="angel2" style="background-image: url('assets/images/avatarStyle4.png')"
+                         class="avatar-style-item G-image">
+                        <div class="avatar-original-clue">Ангел</div>
+                    </div>
+
+
+                </div>
+            </div>
+
+            <div class="avatar-cards-cnt">
+                <div class="avatar-cards G-align-center">
+                    <div data-id="original" style="background-image: url('assets/images/avatar1.jpg')"
+                         class="avatar-card G-image">
+                        <a href="" class="avatar-card-icon G-center">
+                            <img src="assets/images/avatarIcon.svg" alt="avatar">
+                        </a>
+                        <div class="avatar-card-clue G-center">
+                            Ангел
+                        </div>
+
+                    </div>
+                    <div data-id="ufs" style="background-image: url('assets/images/avatar2.jpg')"
+                         class="avatar-card G-image">
+                        <a href="" class="avatar-card-icon G-center">
+                            <img src="assets/images/avatarIcon.svg" alt="avatar">
+                        </a>
+                        <div class="avatar-card-clue G-center">
+                            UFC
+                        </div>
+
+                    </div>
+                    <div data-id="gta" style="background-image: url('assets/images/avatar3.jpg')"
+                         class="avatar-card G-image">
+                        <a href="" class="avatar-card-icon G-center">
+                            <img src="assets/images/avatarIcon.svg" alt="avatar">
+                        </a>
+                        <div class="avatar-card-clue G-center">
+                            GTA
+                        </div>
+
+                    </div>
+                    <div data-id="cyberpunk" style="background-image: url('assets/images/avatar4.jpg')"
+                         class="avatar-card G-image">
+                        <a href="" class="avatar-card-icon G-center">
+                            <img src="assets/images/avatarIcon.svg" alt="avatar">
+                        </a>
+                        <div class="avatar-card-clue G-center">
+                            Киберпанк
+                        </div>
+
+                    </div>
+                    <div data-id="mafia" style="background-image: url('assets/images/avatar5.jpg')"
+                         class="avatar-card G-image">
+                        <a href="" class="avatar-card-icon G-center">
+                            <img src="assets/images/avatarIcon.svg" alt="avatar">
+                        </a>
+                        <div class="avatar-card-clue G-center">
+                            Мафия
+                        </div>
+
+                    </div>
+                    <div data-id="angel" style="background-image: url('assets/images/avatar6.jpg')"
+                         class="avatar-card G-image">
+                        <a href="" class="avatar-card-icon G-center">
+                            <img src="assets/images/avatarIcon.svg" alt="avatar">
+                        </a>
+                        <div class="avatar-card-clue G-center">
+                            Фея
+                        </div>
+
+                    </div>
+                    <div data-id="anime" style="background-image: url('assets/images/avatar7.jpg')"
+                         class="avatar-card G-image">
+                        <a href="" class="avatar-card-icon G-center">
+                            <img src="assets/images/avatarIcon.svg" alt="avatar">
+                        </a>
+                        <div class="avatar-card-clue G-center">
+                            Аниме
+                        </div>
+
+                    </div>
+                    <div data-id="middleAges" style="background-image: url('assets/images/avatar8.jpg')"
+                         class="avatar-card G-image">
+                        <a href="" class="avatar-card-icon G-center">
+                            <img src="assets/images/avatarIcon.svg" alt="avatar">
+                        </a>
+                        <div class="avatar-card-clue G-center">
+                            Средневековье
+                        </div>
+
+                    </div>
+                    <div data-id="watercolor" style="background-image: url('assets/images/avatar9.jpg')"
+                         class="avatar-card G-image">
+                        <a href="" class="avatar-card-icon G-center">
+                            <img src="assets/images/avatarIcon.svg" alt="avatar">
+                        </a>
+                        <div class="avatar-card-clue G-center">
+                            Акварель
+                        </div>
+
+                    </div>
+                    <div data-id="angel2" style="background-image: url('assets/images/avatar10.jpg')"
+                         class="avatar-card G-image">
+                        <a href="" class="avatar-card-icon G-center">
+                            <img src="assets/images/avatarIcon.svg" alt="avatar">
+                        </a>
+                        <div class="avatar-card-clue G-center">
+                            Вампир
+                        </div>
+
+                    </div>
+                    <div data-id="bride" style="background-image: url('assets/images/avatar11.jpg')"
+                         class="avatar-card G-image">
+                        <a href="" class="avatar-card-icon G-center">
+                            <img src="assets/images/avatarIcon.svg" alt="avatar">
+                        </a>
+                        <div class="avatar-card-clue G-center">
+                            Невеста
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <section class="usage-section section">
+            <div class="container">
+                <div class="usage-body G-column-center">
+                    <h2 class="block-title">Использование</h2>
+                    <h3 class="block-main-title">
+                        Уникальные аватары
+                        <span class="text-wrap">для цифровых платформ</span>
+                    </h3>
+
+                    <div class="usage-cnt block-cnt G-center">
+                        <div class="usage-picture G-flex">
+                            <img src="assets/images/usage.png" alt="">
+                        </div>
+
+                        <div class="usage-items">
+                            <div class="usage-item  usage-item--one G-align-start">
+                                <div class="usage-item-icon G-center">
+                                    <i class="icon icon-usage icon-usageIcon1"></i>
+                                </div>
+                                <div class="usage-item-descr">
+                                    <h2 class="usage-item-title">Мессенджеры и соц. сети</h2>
+                                    <p class="usage-item-text">Для создания индивидуального образа
+                                        в профиле для общения</p>
+                                </div>
+                            </div>
+                            <div class="usage-item  usage-item--two G-align-start">
+                                <div class="usage-item-icon G-center">
+                                    <i class="icon icon-usage icon-usageIcon2"></i>
+                                </div>
+                                <div class="usage-item-descr">
+                                    <h2 class="usage-item-title">Блоги и вебсайты</h2>
+                                    <p class="usage-item-text">
+                                        Сделайте контент более живым, стильным и запоминающимся
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="usage-item  usage-item--tree G-align-start">
+                                <div class="usage-item-icon G-center">
+                                    <i class="icon icon-usage icon-usageIcon3"></i>
+                                </div>
+                                <div class="usage-item-descr">
+                                    <h2 class="usage-item-title">Онлайн-форумы и сообщества</h2>
+                                    <p class="usage-item-text">
+                                        Будьте узнаваемы среди участников онлайн-дискуссий
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="usage-item  usage-item--for G-align-start">
+                                <div class="usage-item-icon G-center">
+                                    <i class="icon icon-usage icon-usageIcon4"></i>
+                                </div>
+                                <div class="usage-item-descr">
+                                    <h2 class="usage-item-title">Деловые соц. сети</h2>
+                                    <p class="usage-item-text">
+                                        Для профессиональных площадок,
+                                        <span class="text-wrap">где важно создать солидный образ</span>
+                                    </p>
+                                </div>
+                            </div>
+
+                            <div class="usage-item  usage-item--five G-align-start">
+                                <div class="usage-item-icon G-center">
+                                    <i class="icon icon-usage icon-usageIcon5"></i>
+                                </div>
+                                <div class="usage-item-descr">
+                                    <h2 class="usage-item-title">Геймерские платформы</h2>
+                                    <p class="usage-item-text">
+                                        Для профилей на популярных
+                                        <span class="text-wrap">игровых платформах</span>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+
+                    </div>
+
+                </div>
+
+            </div>
+        </section>
+
+
+        <section class=" advantages-section section">
+            <div class="advantages-body">
+                <div class="face-peculiarities-header G-column-center">
+                    <h2 class="peculiarities-title block-title">Преимущества</h2>
+                    <h3 class="block-main-title">
+                        Satellite AI— ваш лучший выбор
+                    </h3>
+                </div>
+
+                <div class="advantages-cnt  G-column-center">
+                    <div class="advantages-slider-column">
+                        <div class="advantages-slider-box">
+                            <div class="advantages-slider swiper">
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-slide">
+                                        <div class="advantages-item ">
+                                            <div class="advantages-item-icon G-center">
+                                                <i class="icon icon-advantages"></i>
+                                            </div>
+                                            <h3 class="advantages-item-title">Персонализированные стили</h3>
+                                            <p class="advantages-item-sub">
+                                                От делового шика до творческой
+                                                <span class="text-wrap">атмосферы — выберите стиль,</span>
+                                                который подходит именно вам
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="advantages-item ">
+                                            <div class="advantages-item-icon G-center">
+                                                <i class="icon icon-advantages2"></i>
+                                            </div>
+                                            <h3 class="advantages-item-title">Простота в использовании</h3>
+                                            <p class="advantages-item-sub">
+                                                Генерация качественной аватарки
+                                                <span class="text-wrap">не требует художественных навыков.</span>
+                                                Нейросеть сделает всю работу за вас
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="advantages-item ">
+                                            <div class="advantages-item-icon G-center">
+                                                <i class="icon icon-advantages3"></i>
+                                            </div>
+                                            <h3 class="advantages-item-title">Внимание к деталям</h3>
+                                            <p class="advantages-item-sub">
+                                                Система анализирует черты вашего лица
+                                                <span class="text-wrap">и создает аватар, который в точности </span>
+                                                передаст вашу индивидуальность
+                                            </p>
+                                        </div>
+                                    </div>
+
+                                </div>
+                                <div class="advantages-pagination swiper-pagination"></div>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="advantages-avatars ">
+                        <div class="advantages-avatar-items G-align-end">
+                            <div class="advantages-avatar-item big-avatar-item  G-flex">
+                                <img src="assets/images/advantages1.jpg" alt="">
+                            </div>
+                            <div class="advantages-avatar-item small-avatar-item G-flex">
+                                <img src="assets/images/advantages2.png" alt="">
+                            </div>
+                            <div class="advantages-avatar-item average-avatar-item G-flex">
+                                <img src="assets/images/advantages3.jpg" alt="">
+                            </div>
+                            <div class="advantages-avatar-item small-avatar-item G-flex">
+                                <img src="assets/images/advantages4.jpg" alt="">
+                            </div>
+                            <div class="advantages-avatar-item big-avatar-item  G-flex">
+                                <img src="assets/images/advantages5.jpg" alt="">
+                            </div>
+                            <div class="advantages-avatar-item average-avatar-item  G-flex">
+                                <img src="assets/images/advantages6.jpg" alt="">
+                            </div>
+
+                            <div class="advantages-avatar-mobile advantages-avatar-item  big-avatar-item  G-flex">
+                                <img src="assets/images/advantages1.jpg" alt="">
+                            </div>
+                            <div class="advantages-avatar-mobile advantages-avatar-item small-avatar-item G-flex">
+                                <img src="assets/images/advantages2.png" alt="">
+                            </div>
+                            <div class="advantages-avatar-mobile advantages-avatar-item average-avatar-item G-flex">
+                                <img src="assets/images/advantages3.jpg" alt="">
+                            </div>
+                            <div class="advantages-avatar-mobile advantages-avatar-item small-avatar-item G-flex">
+                                <img src="assets/images/advantages4.jpg" alt="">
+                            </div>
+                            <div class="advantages-avatar-mobile advantages-avatar-item big-avatar-item  G-flex">
+                                <img src="assets/images/advantages5.jpg" alt="">
+                            </div>
+                            <div class="advantages-avatar-mobile advantages-avatar-item average-avatar-item  G-flex">
+                                <img src="assets/images/advantages6.jpg" alt="">
+                            </div>
+
+                        </div>
+                        <label class="advantages-btn gradient-hover G-align-center">
+                                <span class="advantages-label btn-main">
+                                    Загрузить фото
+                                    <input id="advantages-file" type="file">
+                                </span>
+                            <a class="icon icon-voice " href=""></a>
+                        </label>
+
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+
+        <section id="possibilities" class="possibilities-section section">
+            <div class="container">
+                <div class="possibilities-body ">
+                    <h2 class="possibilities-block-title block-title">Возможности</h2>
+                    <h3 class="block-main-title">
+                        Больше инструментов
+                        <span class="text-wrap">для работы с фото</span>
+                    </h3>
+                    <div class="possibilities-cnt block-cnt G-flex-column">
+                        <div class="possibilities-column G-flex">
+                            <div class="possibilities-item possibilities-average-item">
+                                <div class="possibilities-item-picture G-flex">
+                                    <img src="assets/images/possibilities.png" alt="image">
+                                </div>
+                                <div class="possibilities-item-info">
+                                    <h4 class="possibilities-item-title">Генерация изображений</h4>
+                                    <p class="possibilities-item-sub">Создавайте уникальные изображения в нужном стиле
+                                        <span class="text-wrap">за считанные секунды по любому запросу</span>
+                                    </p>
+                                </div>
+                            </div>
+
+                            <div class="possibilities-item possibilities-small-item">
+                                <div class="possibilities-item-picture G-flex">
+                                    <img src="assets/images/possibilities2.png" alt="image">
+                                </div>
+                                <div class="possibilities-item-info">
+                                    <h4 class="possibilities-item-title">Создание логотипов</h4>
+                                    <p class="possibilities-item-sub">
+                                        Генерируйте продающие <span class="text-wrap">логотипы для вашего бренда</span>
+                                    </p>
+                                </div>
+                            </div>
+
+
+                            <div class="possibilities-item possibilities-small-item possibilities-item-auto">
+                                <div class="possibilities-item-header">
+                                    <div class="possibilities-item-picture possibilities-slider-picture G-flex">
+                                        <img src="assets/images/afterImage4.png" alt="image">
+                                        <img  src="assets/images/beforeImage4.png" alt="image">
+                                    </div>
+                                </div>
+                                <div class="possibilities-item-info">
+                                    <h4 class="possibilities-item-title">Удаление и замена фона</h4>
+                                    <p class="possibilities-item-sub">
+                                        Удалите фон с изображения
+                                        или замените его другой
+                                    </p>
+                                </div>
+                            </div>
+
+
+                        </div>
+                        <div class="possibilities-column G-flex">
+
+
+                            <div class="possibilities-item possibilities-small-item">
+                                <div class="possibilities-item-header">
+                                    <div class="possibilities-item-picture possibilities-slider-picture G-flex">
+                                        <img src="assets/images/afterImage.png" alt="image">
+                                        <img src="assets/images/beforeImage.png" alt="image">
+                                    </div>
+                                </div>
+                                <div class="possibilities-item-info">
+                                    <h4 class="possibilities-item-title">Улучшение качества</h4>
+                                    <p class="possibilities-item-sub">
+                                        Повышайте резкость
+                                        <span class="text-wrap">и четкость изображений</span>
+                                    </p>
+                                </div>
+                            </div>
+
+                            <div class="possibilities-item margin-auth possibilities-big-item">
+                                <div class="possibilities-item-picture G-flex">
+                                    <img src="assets/images/possibilities5.png" alt="image">
+                                </div>
+                                <div class="possibilities-item-info">
+                                    <h4 class="possibilities-item-title">Image to Image</h4>
+                                    <p class="possibilities-item-sub">
+                                        Преобразуйте существующие изображения, изменяя их стиль,
+                                        <span class="text-wrap">добавляя новые детали <span class="desktop-text">и придавая им совершенно новый смысл и уникальность</span></span>
+                                    </p>
+                                </div>
+                            </div>
+
+
+                        </div>
+                        <div class="possibilities-column  G-justify-end">
+                            <div class="possibilities-center-slide-item  possibilities-average-item">
+                                <div class="possibilities-item-header">
+                                    <div class="possibilities-item-picture possibilities-slider-picture G-flex">
+                                        <img src="assets/images/afterImage3.jpg" alt="image">
+                                        <img src="assets/images/beforeImage3.jpg" alt="image">
+                                    </div>
+                                </div>
+                                <div class="possibilities-item-info">
+                                    <h4 class="possibilities-item-title">Дорисовка фото и изображений</h4>
+                                    <p class="possibilities-item-sub">
+                                        Добавляйте новые элементы на изображения
+                                        <span class="text-wrap">для улучшения композиции и стиля</span>
+                                    </p>
+                                </div>
+                            </div>
+
+
+                            <div class="possibilities-item possibilities-another-item">
+                                <div class="possibilities-item-header">
+                                    <div class="possibilities-item-picture possibilities-slider-picture G-flex">
+                                        <img src="assets/images/afterImage2.jpg" alt="image">
+                                        <img src="assets/images/beforeImage2.png" alt="image">
+                                    </div>
+                                </div>
+                                <div class="possibilities-item-info">
+                                    <h4 class="possibilities-item-title">Замена лица на фото</h4>
+                                    <p class="possibilities-item-sub">
+                                        Меняйте лица на фото с высоким уровнем точности и естественности
+                                        <span class="text-wrap"> с помощью современных технологий обработки изображений</span>
+                                    </p>
+                                </div>
+                            </div>
+
+
+                        </div>
+
+
+                        <div class="possibilities-column G-flex">
+
+                            <div class="possibilities-item possibilities-small-item">
+                                <div class="possibilities-item-picture G-flex">
+                                    <img src="assets/images/possibilities8.jpg" alt="image">
+                                </div>
+                                <div class="possibilities-item-info">
+                                    <h4 class="possibilities-item-title">Коллажи из фото</h4>
+                                    <p class="possibilities-item-sub">
+                                        Объединяйте лучшие моменты <span
+                                            class="text-wrap">жизни в креативные коллажи</span>
+                                    </p>
+                                </div>
+                            </div>
+
+                            <div class="possibilities-item  possibilities-big-item">
+                                <div class="possibilities-item-picture G-flex">
+                                    <img src="assets/images/possibilities9.png" alt="image">
+                                </div>
+                                <div class="possibilities-item-info">
+                                    <h4 class="possibilities-item-title">Объединение фото</h4>
+                                    <p class="possibilities-item-sub">
+
+                                        В один клик объединяйте несколько фотографий в одно изображение.
+                                        <span class="desktop-text-wrap">Это отличный способ создать уникальные и креативные фотографии для любых целей</span>
+                                    </p>
+                                </div>
+                            </div>
+
+
+                        </div>
+
+                    </div>
+
+                    <div class="possibilities-slider-block">
+                        <div class="possibilities-slider swiper ">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    <div class="possibilities-item ">
+                                        <div class="possibilities-item-picture G-flex">
+                                            <img src="assets/images/possibilities.png" alt="image">
+                                        </div>
+                                        <div class="possibilities-item-info">
+                                            <h4 class="possibilities-item-title">Генерация изображений</h4>
+                                            <p class="possibilities-item-sub">Создавайте уникальные изображения в нужном
+                                                стиле
+                                                <span class="desktop-text-wrap">за считанные секунды по любому запросу</span>
+                                            </p>
+                                        </div>
+                                    </div>
+
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="possibilities-item ">
+                                        <div class="possibilities-item-picture G-flex">
+                                            <img src="assets/images/possibilities2.png" alt="image">
+                                        </div>
+                                        <div class="possibilities-item-info">
+                                            <h4 class="possibilities-item-title">Создание логотипов</h4>
+                                            <p class="possibilities-item-sub">
+                                                Генерируйте продающие <span
+                                                    class="desktop-text-wrap">логотипы <span class="mobile-text-wrap">для вашего бренда</span></span>
+                                            </p>
+                                        </div>
+                                    </div>
+
+                                </div>
+                                <div class="swiper-slide">
+
+                                    <div class="possibilities-item  ">
+                                        <div class="possibilities-item-header">
+                                            <div class="possibilities-item-picture possibilities-slider-picture G-flex">
+                                                <img src="assets/images/afterImage4.jpg" alt="image">
+                                                <img  src="assets/images/beforeImage4.png" alt="image">
+                                            </div>
+                                        </div>
+                                        <div class="possibilities-item-info">
+                                            <h4 class="possibilities-item-title">Удаление и замена фона</h4>
+                                            <p class="possibilities-item-sub">
+                                                Удалите фон с изображения
+                                                <span class="text-wrap">или замените его другой</span>
+                                            </p>
+                                        </div>
+                                    </div>
+
+
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="possibilities-item ">
+                                        <div class="possibilities-item-header">
+                                            <div class="possibilities-item-picture possibilities-slider-picture G-flex">
+                                                <img src="assets/images/afterImage.png" alt="image">
+                                                <img src="assets/images/beforeImage.png" alt="image">
+                                            </div>
+                                        </div>
+                                        <div class="possibilities-item-info">
+                                            <h4 class="possibilities-item-title">Улучшение качества</h4>
+                                            <p class="possibilities-item-sub">
+                                                Повышайте резкость
+                                                <span class="desktop-text-wrap">и четкость изображений</span>
+                                            </p>
+                                        </div>
+                                    </div>
+
+                                    <!--                                    <div class="possibilities-item ">-->
+                                    <!--                                        <div class="possibilities-item-picture G-flex">-->
+                                    <!--                                            <img src="assets/images/possibilities4.png" alt="image">-->
+                                    <!--                                        </div>-->
+                                    <!--                                        <div class="possibilities-item-info">-->
+                                    <!--                                            <h4 class="possibilities-item-title">Улучшение качества</h4>-->
+                                    <!--                                            <p class="possibilities-item-sub">-->
+                                    <!--                                                Повышайте резкость-->
+                                    <!--                                                <span class="desktop-text-wrap">и четкость <span-->
+                                    <!--                                                        class="mobile-text-wrap">изображений</span></span>-->
+                                    <!--                                            </p>-->
+                                    <!--                                        </div>-->
+                                    <!--                                    </div>-->
+
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="possibilities-item ">
+                                        <div class="possibilities-item-picture G-flex">
+                                            <img src="assets/images/possibilities5.png" alt="image">
+                                        </div>
+                                        <div class="possibilities-item-info">
+                                            <h4 class="possibilities-item-title">Image to Image</h4>
+                                            <p class="possibilities-item-sub">
+                                                Преобразуйте существующие изображения, изменяя их стиль,
+                                                <span class="text-wrap">добавляя новые детали <span
+                                                        class="desktop-text">и придавая им совершенно новый смысл и уникальность</span></span>
+                                            </p>
+                                        </div>
+                                    </div>
+
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="possibilities-center-slide-item  possibilities-average-item">
+                                        <div class="possibilities-item-header">
+                                            <div class="possibilities-item-picture possibilities-slider-picture G-flex">
+                                                <img src="assets/images/afterImage3.jpg" alt="image">
+                                                <img src="assets/images/beforeImage3.jpg" alt="image">
+                                            </div>
+                                        </div>
+                                        <div class="possibilities-item-info">
+                                            <h4 class="possibilities-item-title">Дорисовка фото и изображений</h4>
+                                            <p class="possibilities-item-sub">
+                                                Добавляйте новые элементы на изображения
+                                                <span class="desktop-text-wrap">для улучшения композиции и стиля</span>
+                                            </p>
+                                        </div>
+                                    </div>
+
+
+
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="possibilities-item ">
+                                        <div class="possibilities-item-header">
+                                            <div class="possibilities-item-picture possibilities-slider-picture G-flex">
+                                                <img src="assets/images/afterImage2.jpg" alt="image">
+                                                <img src="assets/images/beforeImage2.png" alt="image">
+                                            </div>
+                                        </div>
+                                        <div class="possibilities-item-info">
+                                            <h4 class="possibilities-item-title">Замена лица на фото</h4>
+                                            <p class="possibilities-item-sub">
+                                                Меняйте лица на фото с высоким уровнем точности и естественности
+                                                <span class="desktop-text-wrap"> с помощью современных технологий <span class="text-none">обработки изображений</span></span>
+                                            </p>
+                                        </div>
+                                    </div>
+
+
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="possibilities-item">
+                                        <div class="possibilities-item-picture G-flex">
+                                            <img src="assets/images/possibilities8.jpg" alt="image">
+                                        </div>
+                                        <div class="possibilities-item-info">
+                                            <h4 class="possibilities-item-title">Коллажи из фото</h4>
+                                            <p class="possibilities-item-sub">
+                                                Объединяйте лучшие моменты <span class="text-wrap">жизни в креативные коллажи</span>
+                                            </p>
+                                        </div>
+                                    </div>
+
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="possibilities-item  ">
+                                        <div class="possibilities-item-picture G-flex">
+                                            <img src="assets/images/possibilities10.png" alt="image">
+                                        </div>
+                                        <div class="possibilities-item-info">
+                                            <h4 class="possibilities-item-title">Объединение фото</h4>
+                                            <p class="possibilities-item-sub">
+                                                В один клик объединяйте несколько фотографий в одно изображение.
+                                                <span class="desktop-text-wrap desktop-text">Это отличный способ создать уникальные и креативные фотографии для любых целей</span>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="possibilities-pagination swiper-pagination"></div>
+
+                        </div>
+                    </div>
+
+                    <div class="possibilities-btn-cnt G-center">
+                        <div class="possibilities-btn gradient-hover G-align-center">
+                            <button class="btn-main">
+                                Попробовать сейчас
+                            </button>
+                            <a class="icon icon-voice " href=""></a>
+                        </div>
+
+                    </div>
+
+
+                </div>
+            </div>
+        </section>
+
+
+        <section id="forWhom" class="suitable-section section ">
+            <div class="container">
+                <div class="suitable-body G-column-center">
+                    <h2 class="suitable-title block-title">Кому подойдёт</h2>
+                    <h3 class="block-main-title">
+                        Незаменимый помощник
+                        <span class="text-wrap">для каждого</span>
+                    </h3>
+                    <div class="suitable-cnt">
+                        <div class="will-do-items">
+                            <div class="will-do-item will-item--one G-align-center">
+                                <div class="will-do-img G-flex">
+                                    <img src="assets/images/willDo1.png" alt="image">
+                                </div>
+                                <p class="will-do-name">
+                                    Маркетологи
+                                </p>
+                            </div>
+                            <div class="will-do-item will-item--two G-align-center">
+                                <div class="will-do-img G-flex">
+                                    <img src="assets/images/willDo2.png" alt="image">
+                                </div>
+                                <p class="will-do-name">
+                                    Преподователи
+                                </p>
+                            </div>
+                            <div class="will-do-item will-item--tree G-align-center">
+                                <div class="will-do-img G-flex">
+                                    <img src="assets/images/willDo3.png" alt="image">
+                                </div>
+                                <p class="will-do-name">
+                                    Фотографы
+                                </p>
+                            </div>
+                            <div class="will-do-item will-item--for G-align-center">
+                                <div class="will-do-img G-flex">
+                                    <img src="assets/images/willDo4.png" alt="image">
+                                </div>
+                                <p class="will-do-name">
+                                    SMM-специалисты
+                                </p>
+                            </div>
+                            <div class="will-do-item will-item--five G-align-center">
+                                <div class="will-do-img G-flex">
+                                    <img src="assets/images/willDo5.png" alt="image">
+                                </div>
+                                <p class="will-do-name">
+                                    Дизайнеры
+                                </p>
+                            </div>
+                            <div class="will-do-item will-item--six G-align-center">
+                                <div class="will-do-img G-flex">
+                                    <img src="assets/images/willDo6.png" alt="image">
+                                </div>
+                                <p class="will-do-name">
+                                    Копирайтеры
+                                </p>
+                            </div>
+                            <div class="will-do-item will-item--seven G-align-center">
+                                <div class="will-do-img G-flex">
+                                    <img src="assets/images/willDo7.png" alt="image">
+                                </div>
+                                <p class="will-do-name">
+                                    Студенты
+                                </p>
+                            </div>
+                            <div class="will-do-item will-item--nine G-align-center">
+                                <div class="will-do-img G-flex">
+                                    <img src="assets/images/willDo8.png" alt="image">
+                                </div>
+                                <p class="will-do-name">
+                                    PR-менеджер
+                                </p>
+                            </div>
+                            <div class="will-do-item will-item--ten G-align-center">
+                                <div class="will-do-img G-flex">
+                                    <img src="assets/images/willDo9.png" alt="image">
+                                </div>
+                                <p class="will-do-name">
+                                    Художники
+                                </p>
+                            </div>
+                            <div class="will-do-item will-item--eleven G-align-center">
+                                <div class="will-do-img G-flex">
+                                    <img src="assets/images/willDo10.png" alt="image">
+                                </div>
+                                <p class="will-do-name">
+                                    Блогеры
+                                </p>
+                            </div>
+                            <div class="will-do-item will-item--twelve G-align-center">
+                                <div class="will-do-img G-flex">
+                                    <img src="assets/images/willDo11.png" alt="image">
+                                </div>
+                                <p class="will-do-name">
+                                    Фрилансеры
+                                </p>
+                            </div>
+                            <div class="will-do-item will-item--thirteen G-align-center">
+                                <div class="will-do-img G-flex">
+                                    <img src="assets/images/willDo12.png" alt="image">
+                                </div>
+                                <p class="will-do-name">
+                                    Журналисты
+                                </p>
+                            </div>
+                        </div>
+
+
+                        <div class="will-do-items will-do-items-row2">
+                            <div class="will-do-item will-item--one G-align-center">
+                                <div class="will-do-img G-flex">
+                                    <img src="assets/images/willDo1.png" alt="image">
+                                </div>
+                                <p class="will-do-name">
+                                    Маркетологи
+                                </p>
+                            </div>
+                            <div class="will-do-item will-item--two G-align-center">
+                                <div class="will-do-img G-flex">
+                                    <img src="assets/images/willDo2.png" alt="image">
+                                </div>
+                                <p class="will-do-name">
+                                    Преподователи
+                                </p>
+                            </div>
+                            <div class="will-do-item will-item--tree G-align-center">
+                                <div class="will-do-img G-flex">
+                                    <img src="assets/images/willDo3.png" alt="image">
+                                </div>
+                                <p class="will-do-name">
+                                    Фотографы
+                                </p>
+                            </div>
+                            <div class="will-do-item will-item--for G-align-center">
+                                <div class="will-do-img G-flex">
+                                    <img src="assets/images/willDo4.png" alt="image">
+                                </div>
+                                <p class="will-do-name">
+                                    SMM-специалисты
+                                </p>
+                            </div>
+                            <div class="will-do-item will-item--five G-align-center">
+                                <div class="will-do-img G-flex">
+                                    <img src="assets/images/willDo5.png" alt="image">
+                                </div>
+                                <p class="will-do-name">
+                                    Дизайнеры
+                                </p>
+                            </div>
+                            <div class="will-do-item will-item--six G-align-center">
+                                <div class="will-do-img G-flex">
+                                    <img src="assets/images/willDo6.png" alt="image">
+                                </div>
+                                <p class="will-do-name">
+                                    Копирайтеры
+                                </p>
+                            </div>
+                            <div class="will-do-item will-item--seven G-align-center">
+                                <div class="will-do-img G-flex">
+                                    <img src="assets/images/willDo7.png" alt="image">
+                                </div>
+                                <p class="will-do-name">
+                                    Студенты
+                                </p>
+                            </div>
+                            <div class="will-do-item will-item--nine G-align-center">
+                                <div class="will-do-img G-flex">
+                                    <img src="assets/images/willDo8.png" alt="image">
+                                </div>
+                                <p class="will-do-name">
+                                    PR-менеджер
+                                </p>
+                            </div>
+                            <div class="will-do-item will-item--ten G-align-center">
+                                <div class="will-do-img G-flex">
+                                    <img src="assets/images/willDo9.png" alt="image">
+                                </div>
+                                <p class="will-do-name">
+                                    Художники
+                                </p>
+                            </div>
+                            <div class="will-do-item will-item--eleven G-align-center">
+                                <div class="will-do-img G-flex">
+                                    <img src="assets/images/willDo10.png" alt="image">
+                                </div>
+                                <p class="will-do-name">
+                                    Блогеры
+                                </p>
+                            </div>
+                            <div class="will-do-item will-item--twelve G-align-center">
+                                <div class="will-do-img G-flex">
+                                    <img src="assets/images/willDo11.png" alt="image">
+                                </div>
+                                <p class="will-do-name">
+                                    Фрилансеры
+                                </p>
+                            </div>
+                            <div class="will-do-item will-item--thirteen G-align-center">
+                                <div class="will-do-img G-flex">
+                                    <img src="assets/images/willDo12.png" alt="image">
+                                </div>
+                                <p class="will-do-name">
+                                    Журналисты
+                                </p>
+                            </div>
+                        </div>
+
+
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <section id="reviews" class="reviews-section section ">
+            <div class="container">
+                <div class="reviews-body G-column-center">
+                    <h2 class=" block-title">Отзывы</h2>
+                    <h3 class="block-main-title">
+                        Миллионы пользователей
+                        <span class="text-wrap"> выбирают нас</span>
+                    </h3>
+
+                    <div class="reviews-box block-cnt G-justify-between">
+                        <div class=" reviews-left-item">
+                            <div class="face-reviews-left-img">
+                                <img src="assets/images/reviews23.jpg" alt="image">
+                            </div>
+                            <div class="reviews-left-info">
+                                <div class="reviews-item-header G-justify-between">
+                                    <div class="reviews-author">
+                                        <h4 class="">Астанина Лилия</h4>
+                                        <p>Социальный медиа-менеджер</p>
+                                    </div>
+                                    <div class="reviews-icon G-flex">
+                                        <img src="assets/images/estimation1.svg" alt="">
+                                    </div>
+
+                                </div>
+                                <div class="reviews-item-text">
+                                    В своей работе я часто использую аватары <span class="text-wrap">для различных аккаунтов.</span>
+                                    Нейросеть позволяет мне быстро генерировать уникальные изображения, которые
+                                    соответствуют стилю бренда
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper reviews-swiper">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide reviews-mobile-item">
+                                    <div class="face-reviews-item G-flex">
+                                        <div class="face-reviews-left-img">
+                                            <img src="assets/images/reviews23.jpg" alt="image">
+                                        </div>
+                                        <div class="reviews-left-info">
+                                            <div class="reviews-item-header G-justify-between">
+                                                <div class="reviews-author">
+                                                    <h4 class="">Астанина Лилия</h4>
+                                                    <p>Социальный медиа-менеджер</p>
+                                                </div>
+                                                <div class="reviews-icon G-flex">
+                                                    <img src="assets/images/estimation1.svg" alt="">
+                                                </div>
+
+                                            </div>
+                                            <div class="reviews-item-text">
+                                                В своей работе я часто использую аватары <span class="desktop-text-wrap">для различных аккаунтов.</span>
+                                                Нейросеть позволяет мне быстро генерировать уникальные изображения,
+                                                которые
+                                                соответствуют стилю бренда
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="face-reviews-item G-flex">
+                                        <div class="reviews-item-img">
+                                            <img src="assets/images/reviews24.png" alt="image">
+                                        </div>
+                                        <div class="reviews-item-info">
+                                            <div class="reviews-item-header G-justify-between">
+                                                <div class="reviews-author">
+                                                    <h4>Красовская Дарина</h4>
+                                                    <p>Фотограф</p>
+                                                </div>
+                                                <div class="reviews-icon G-flex">
+                                                    <img src="assets/images/estimation1.svg" alt="">
+                                                </div>
+
+                                            </div>
+                                            <div class="reviews-item-text">
+                                                Я использую нейросеть для создания аватаров для своих клиентов, которые
+                                                хотят что-то уникальное. Возможность выбирать стили и настраивать детали
+                                                меня покорила. Результаты всегда радуют!
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="face-reviews-item G-flex">
+                                        <div class="reviews-item-img">
+                                            <img src="assets/images/reviews25.png" alt="image">
+                                        </div>
+                                        <div class="reviews-item-info">
+                                            <div class="reviews-item-header G-justify-between">
+                                                <div class="reviews-author">
+                                                    <h4>Дмитров Дамир</h4>
+                                                    <p>Разработчик игр</p>
+                                                </div>
+                                                <div class="reviews-icon G-flex">
+                                                    <img src="assets/images/estimation1.svg" alt="">
+                                                </div>
+
+                                            </div>
+                                            <div class="reviews-item-text">
+                                                Satellite AI позволяет мне быстро генерировать аватары для тестирования
+                                                и концептуализации персонажей.
+                                                Я впечатлён разнообразием стилей
+                                                и качеством изображений.
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="face-reviews-item G-flex">
+                                        <div class="reviews-item-img">
+                                            <img src="assets/images/reviews26.png" alt="image">
+                                        </div>
+                                        <div class="reviews-item-info">
+                                            <div class="reviews-item-header G-justify-between">
+                                                <div class="reviews-author">
+                                                    <h4>Ситец Марина</h4>
+                                                    <p>Блогер</p>
+                                                </div>
+                                                <div class="reviews-icon G-flex">
+                                                    <img src="assets/images/estimation1.svg" alt="">
+                                                </div>
+
+                                            </div>
+                                            <div class="reviews-item-text">
+                                                Как блогер, я всегда ищу способы выделиться в социальных сетях.
+                                                Эта нейросеть помогла мне создать уникальный аватар,
+                                                который отражает мою личность и стиль. 
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="face-reviews-item G-flex">
+                                        <div class="reviews-item-img">
+                                            <img src="assets/images/reviews27.jpg" alt="image">
+                                        </div>
+                                        <div class="reviews-item-info">
+                                            <div class="reviews-item-header G-justify-between">
+                                                <div class="reviews-author">
+                                                    <h4>Елецкая Маргарита</h4>
+                                                    <p>UX/UI дизайнер</p>
+                                                </div>
+                                                <div class="reviews-icon G-flex">
+                                                    <img src="assets/images/estimation1.svg" alt="">
+                                                </div>
+
+                                            </div>
+                                            <div class="reviews-item-text">
+                                                В своей работе я часто сталкиваюсь с необходимостью создания аватаров
+                                                для пользователей. Теперь я могу быстро генерировать разные варианты
+                                                и выбирать наиболее подходящие для интерфейса.
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="face-reviews-item G-flex">
+                                        <div class="reviews-item-img">
+                                            <img src="assets/images/reviews28.png" alt="image">
+                                        </div>
+                                        <div class="reviews-item-info">
+                                            <div class="reviews-item-header G-justify-between">
+                                                <div class="reviews-author">
+                                                    <h4>Миронов Захар</h4>
+                                                    <p>Студент художественного факультета</p>
+                                                </div>
+                                                <div class="reviews-icon G-flex">
+                                                    <img src="assets/images/estimation1.svg" alt="">
+                                                </div>
+
+                                            </div>
+                                            <div class="reviews-item-text">
+                                                Я учусь на художественном факультете и использую эту нейросеть
+                                                для экспериментов с различными стилями. Это отличный способ развивать
+                                                свои навыки и находить вдохновение.
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="face-reviews-item G-flex">
+                                        <div class="reviews-item-img">
+                                            <img src="assets/images/reviews29.png" alt="image">
+                                        </div>
+                                        <div class="reviews-item-info">
+                                            <div class="reviews-item-header G-justify-between">
+                                                <div class="reviews-author">
+                                                    <h4>Хорхордина Вероника</h4>
+                                                    <p>Копирайтер</p>
+                                                </div>
+                                                <div class="reviews-icon G-flex">
+                                                    <img src="assets/images/estimation1.svg" alt="">
+                                                </div>
+
+                                            </div>
+                                            <div class="reviews-item-text">
+                                                Satellite AI помогла мне создать аватары для моих проектов, которые
+                                                идеально дополняют текст. Это добавляет глубину и делает контент
+                                                более привлекательным для читателей.
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="face-reviews-item G-flex">
+                                        <div class="reviews-item-img">
+                                            <img src="assets/images/reviews30.png" alt="image">
+                                        </div>
+                                        <div class="reviews-item-info">
+                                            <div class="reviews-item-header G-justify-between">
+                                                <div class="reviews-author">
+                                                    <h4>Каратаева Елизавета</h4>
+                                                    <p>Специалист по PR</p>
+                                                </div>
+                                                <div class="reviews-icon G-flex">
+                                                    <img src="assets/images/estimation1.svg" alt="">
+                                                </div>
+
+                                            </div>
+                                            <div class="reviews-item-text">
+                                                Я создаю аватары для пресс-релизов и социальных сетей. Это помогает мне
+                                                представить компанию в более креативном свете. Меня приятно удивляют
+                                                качество
+                                                и разнообразные стили в сервисе.
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="face-reviews-item G-flex">
+                                        <div class="reviews-item-img">
+                                            <img src="assets/images/reviews31.png" alt="image">
+                                        </div>
+                                        <div class="reviews-item-info">
+                                            <div class="reviews-item-header G-justify-between">
+                                                <div class="reviews-author">
+                                                    <h4>Брылёва Галина</h4>
+                                                    <p>Графический дизайнер</p>
+                                                </div>
+                                                <div class="reviews-icon G-flex">
+                                                    <img src="assets/images/estimation1.svg" alt="">
+                                                </div>
+
+                                            </div>
+                                            <div class="reviews-item-text">
+                                                Я использую эту нейросеть для создания аватаров для своих клиентов.
+                                                Результаты впечатляют! Она предлагает множество стилей, от минимализма
+                                                до яркой иллюстрации.
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="face-reviews-item G-flex">
+                                        <div class="reviews-item-img">
+                                            <img src="assets/images/reviews32.png" alt="image">
+                                        </div>
+                                        <div class="reviews-item-info">
+                                            <div class="reviews-item-header G-justify-between">
+                                                <div class="reviews-author">
+                                                    <h4>Духанин Марк</h4>
+                                                    <p>Курьер</p>
+                                                </div>
+                                                <div class="reviews-icon G-flex">
+                                                    <img src="assets/images/estimation1.svg" alt="">
+                                                </div>
+
+                                            </div>
+                                            <div class="reviews-item-text">
+                                                Создал в этом сервсе аватар для рабочего приложения. Я получил много
+                                                положительных отзывов от клиентов,
+                                                и это делает мою работу прибыльней
+                                                и более приятной!
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="face-reviews-item G-flex">
+                                        <div class="reviews-item-img">
+                                            <img src="assets/images/reviews33.png" alt="image">
+                                        </div>
+                                        <div class="reviews-item-info">
+                                            <div class="reviews-item-header G-justify-between">
+                                                <div class="reviews-author">
+                                                    <h4>Крестиненко Элина</h4>
+                                                    <p>Маркетолог</p>
+                                                </div>
+                                                <div class="reviews-icon G-flex">
+                                                    <img src="assets/images/estimation1.svg" alt="">
+                                                </div>
+
+                                            </div>
+                                            <div class="reviews-item-text">
+                                                Satellite AI стала настоящей находкой!
+                                                Я создала уникальные аватары
+                                                для социальных сетей, которые привлекли внимание и повысили
+                                                вовлеченность пользователей в бренд и его ценности.
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+
+                            <div class="reviews-pagination swiper-pagination"></div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+
+        <section id="faq" class="faq-section section ">
+            <div class="container">
+                <div class="faq-body G-column-center">
+                    <h2 class="faq-title block-title">FAQ</h2>
+                    <h3 class="block-main-title">
+                        Поможем разобраться
+                    </h3>
+                    <div class="faq-cnt G-flex-column">
+                        <div class="faq-item">
+                            <div class="faq-item-header G-flex">
+                                <div class="faq-item-icon">
+                                    <span></span>
+                                </div>
+                                <div class="faq-item-title">Как работает Satellite AI?</div>
+                            </div>
+                            <div class="faq-item-sub">
+                                Работа искусственного интеллекта основана на использовании
+                                алгоритмов<span class="text-wrap">и методов машинного обучения, которые позволяют системам обучаться на основе данных</span>
+                                опыта. Алгоритмы ИИ обрабатывают большие объёмы данных, выявляют и закономерности
+                                <span class="text-wrap"> и делают
+                                прогнозы или принимают решения на основе этих закономерностей.</span>
+                            </div>
+                        </div>
+                        <div class="faq-item">
+                            <div class="faq-item-header G-flex">
+                                <div class="faq-item-icon">
+                                    <span></span>
+                                </div>
+                                <div class="faq-item-title">Как быстро нейросеть <span class="mobile-text-wrap">обрабатывает запрос?</span>
+                                </div>
+                            </div>
+                            <div class="faq-item-sub">
+                                Время обработки обычно занимает от нескольких секунд до минуты, в зависимости
+                                <span class="text-wrap">от сложности задачи и выбранных параметров.</span>
+                            </div>
+                        </div>
+                        <div class="faq-item">
+                            <div class="faq-item-header G-flex">
+                                <div class="faq-item-icon">
+                                    <span></span>
+                                </div>
+                                <div class="faq-item-title">Какие функции поддерживает нейросеть?</div>
+                            </div>
+                            <div class="faq-item-sub">
+                                <p class="faq-sub-title">Satellite AI позволяет:</p>
+                                <ul class="faq-sub-list G-flex-column">
+                                    <li>
+                                        Создавать изображения по описанию (генерация изображений).
+                                    </li>
+                                    <li>
+                                        Удалять фон с фотографий.
+                                    </li>
+                                    <li>
+                                        Улучшать качество фотографий (увеличение разрешения, улучшение чёткости).
+                                    </li>
+                                    <li>
+                                        Применять фильтры и стили к изображениям.
+                                    </li>
+                                    <li>
+                                        Генерировать визуальные эффекты и композиции по заданным параметрам.
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="faq-item">
+                            <div class="faq-item-header G-flex">
+                                <div class="faq-item-icon">
+                                    <span></span>
+                                </div>
+                                <div class="faq-item-title">Какие требования к устройству <span
+                                        class="mobile-text-wrap">для работы с Satellite AI?</span>
+                                </div>
+                            </div>
+                            <div class="faq-item-sub">
+                                Satellite AI работает в любом современном браузере, поддерживающем
+                                <span class="text-wrap"> интернет-соединение. Нет необходимости устанавливать дополнительное ПО,</span>
+                                <span class="text-wrap">и работа возможна как на настольных компьютерах, так и на мобильных устройствах.</span>
+                            </div>
+                        </div>
+                        <div class="faq-item">
+                            <div class="faq-item-header G-flex">
+                                <div class="faq-item-icon">
+                                    <span></span>
+                                </div>
+                                <div class="faq-item-title">Как использовать функцию <span class='mobile-text-wrap'>генерации изображений?</span>
+                                </div>
+                            </div>
+                            <div class="faq-item-sub">
+                                Для создания изображения достаточно ввести текстовое описание, выбрать настройки
+                                <span class="text-wrap">(цветовую гамму, стиль) и нажать на кнопку генерации. Нейросеть Satellite AI создаст</span>
+                                <span class="text-wrap">изображение за несколько секунд, исходя из ваших пожеланий.</span>
+                            </div>
+                        </div>
+                        <div class="faq-item">
+                            <div class="faq-item-header G-flex">
+                                <div class="faq-item-icon">
+                                    <span></span>
+                                </div>
+                                <div class="faq-item-title">Можно ли использовать Satellite AI <span
+                                        class="mobile-text-wrap">для коммерческих целей?</span>
+                                </div>
+                            </div>
+                            <div class="faq-item-sub">
+                                Да, изображения, созданные с помощью Satellite AI, могут использоваться
+                                <span class="text-wrap">в коммерческих проектах, в зависимости от выбранного тарифа.</span>
+                                <span class="text-wrap">Рекомендуем ознакомиться с условиями использования на странице тарифов.</span>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <section class="trust-section ">
+            <div class="trust-body G-column-center">
+                <h2 class="trust-title">
+                    Доверьте создание <span class="text-wrap">контента Satellite AI</span>
+                </h2>
+                <p class="trust-subtitle">
+                    Интуитивный интерфейс для оптимизации
+                    <span class="text-wrap">работы с изображениями</span>
+                </p>
+
+                <div class="trust-btn-cnt G-center">
+                    <div class="trust-btn gradient-hover G-align-center">
+                        <button class="btn-main">
+                            Начать работу
+                        </button>
+                        <a class="icon icon-voice " href=""></a>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+
+    </main>
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-body G-justify-between">
+                <a class="footer-logo" href="backgroundRemoval.html">
+                    <img src="assets/images/logo.svg" alt="">
+                </a>
+                <nav class="footer-menu">
+                    <ul class="footer-menu-list G-flex">
+                        <li>
+                            <a href="#possibilities">Возможности</a>
+                        </li>
+                        <li>
+                            <a href="#forWhom">Для кого</a>
+                        </li>
+                        <li>
+                            <a href="#reviews">Отзывы</a>
+                        </li>
+                        <li>
+                            <a href="#faq">FAQ</a>
+                        </li>
+                    </ul>
+                </nav>
+
+                <button class="btn-white footer-btn">Регистрация</button>
+
+            </div>
+            <div class="footer-clue ">
+                <span>© 2024 Satellite AI.</span>
+                <span> Все права защищены</span>
+            </div>
+        </div>
+    </footer>
+
+</div>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollToPlugin.min.js"></script>
+<script src="assets/js/gsap.js"></script>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.event.move/1.3.6/jquery.event.move.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/zurb-twentytwenty@0.1.1/js/jquery.twentytwenty.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<script src="assets/js/index.js"></script>
+<script src="assets/js/swiper.js"></script>
+
+</body>
+</html>

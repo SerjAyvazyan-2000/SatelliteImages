@@ -1,0 +1,804 @@
+
+.avatar-hero-section {
+    position: relative;
+    min-height: 770px;
+    margin-top: 114px;
+}
+
+
+.avatar-hero-section::after {
+    content: "";
+    position: absolute;
+    top: -100px;
+    left: 0;
+    width: 100%;
+    height: 130%;
+    z-index: 1;
+    background-image: url('../images/avatarHeroBg.png');
+    background-size: cover;
+    background-position: unset;
+    background-repeat: no-repeat;
+}
+
+.collage-hero-body {
+    gap: 20px;
+    max-width: 1058px;
+    justify-content: space-between;
+    margin: 0 auto;
+    padding: 60px 14px 0 14px;
+    position: relative;
+    z-index: 3;
+
+}
+
+.avatar-hero-btn {
+    max-width: 165px;
+    width: 100%;
+    margin-top: 36px;
+}
+
+.avatar-hero-btn.active {
+    max-width: 180px;
+
+}
+
+.avatar-hero-titles {
+    padding-top: 52px;
+}
+
+.avatar-hero-style {
+    max-width: 320px;
+    width: 100%;
+    height: 627px;
+    position: relative;
+}
+
+.avatar-style-item {
+    width: 256px;
+    height: 256px;
+    border-radius: 12px;
+    padding: 8px;
+    position: absolute;
+    left: 50%;
+    top: 40%;
+    transform: translate(-50%, -50%);
+
+}
+
+.avatar-original-clue::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    padding: 2px;
+    background: linear-gradient(105.61deg, rgba(255, 255, 255, 0.04) 0%, rgba(255, 255, 255, 0) 100%);
+    -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    mask-composite: exclude;
+    z-index: 1;
+    transition: .3s;
+    border-radius: 100px;
+
+}
+
+.avatar-original-clue {
+    padding: 5px 12px;
+    font-size: 12px;
+    font-weight: 400;
+    border-radius: 100px;
+    line-height: 16px;
+    background: #000000BF;
+    backdrop-filter: blur(6px);
+    text-align: center;
+    color: var(--white);
+    width: max-content;
+    opacity: .6;
+    position: relative;
+}
+
+
+.avatar-cards-cnt {
+    max-width: 1440px;
+    width: 100%;
+    margin: -270px auto 0;
+    position: relative;
+    z-index: 3;
+    overflow: hidden;
+}
+
+.avatar-cards {
+    gap: 20px;
+    animation: scroll-left 45s linear infinite;
+
+}
+
+@keyframes scroll-left {
+    0% {
+        transform: translateX(0);
+    }
+    50% {
+        transform: translateX(-100%);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+
+.avatar-card-icon {
+    position: relative;
+    background: #1E1E20;
+    border-radius: 50%;
+    width: 32px;
+    height: 32px;
+    margin-left: auto;
+}
+
+.avatar-card-icon::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: 16px;
+    padding: 1.5px;
+    background: linear-gradient(86.94deg, rgba(99, 86, 254, 0.28) 0.62%, rgba(118, 74, 239, 0.28) 30.62%, rgba(138, 62, 223, 0.28) 61.67%, rgba(163, 48, 203, 0.28) 99.38%);
+    -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    mask-composite: exclude;
+    z-index: 1;
+    transition: .3s;
+}
+
+.avatar-card {
+    min-width: 220px;
+    height: 280px;
+    padding: 8px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    cursor: pointer;
+    position: relative;
+    border-radius: 16px;
+
+
+}
+
+.avatar-card:hover::before {
+    padding: 2.5px;
+
+}
+
+.avatar-card::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: 16px;
+    padding: 1px;
+    background: linear-gradient(86.94deg, rgba(99, 86, 254, 0.5) 0.62%, rgba(118, 74, 239, 0.5) 30.62%, rgba(138, 62, 223, 0.5) 61.67%, rgba(163, 48, 203, 0.5) 99.38%);
+    -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    mask-composite: exclude;
+    z-index: 1;
+    transition: .3s;
+}
+
+.avatar-card-clue {
+    width: 100%;
+    height: 40px;
+    padding: 6px;
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 24px;
+    text-align: center;
+    color: var(--white);
+    background: #000000BF;
+    backdrop-filter: blur(6px);
+    position: relative;
+    border-radius: 100px;
+}
+
+.avatar-card-clue::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: 100px;
+    padding: 2px;
+    background: linear-gradient(105.61deg, rgba(255, 255, 255, 0.04) 0%, rgba(255, 255, 255, 0) 100%);
+    -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    mask-composite: exclude;
+    z-index: 1;
+    transition: .3s;
+    border-radius: 100px;
+
+}
+
+.usage-picture {
+    max-width: 590px;
+    width: 100%;
+    max-height: 590px;
+    height: 100%;
+}
+
+.usage-picture img {
+    width: 100%;
+    object-fit: cover;
+    border-radius: 20px;
+}
+
+
+.icon-usage {
+    background: linear-gradient(86.94deg, #6356FE 0.62%, #764AEF 30.62%, #8A3EDF 61.67%, #A330CB 99.38%);
+    font-size: 24px;
+}
+
+
+.usage-item-icon {
+    position: relative;
+    background: #1E1E20;
+    box-shadow: 0px 0px 16px 0px #00000029;
+    flex: 0 0 40px;
+    height: 40px;
+    border-radius: 10px;
+}
+
+.usage-item-icon::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    padding: 2px;
+    background: linear-gradient(105.61deg, rgba(255, 255, 255, 0.04) 0%, rgba(255, 255, 255, 0) 100%);
+    -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    mask-composite: exclude;
+    z-index: 1;
+    transition: .3s;
+    border-radius: 10px;
+}
+
+.usage-items {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+.usage-item {
+    padding: 24px;
+    background: #1E1E20;
+    box-shadow: 0px 0px 16px 0px #6356FE14;
+    border-radius: 16px;
+    max-width: 406px;
+    width: 100%;
+    gap: 20px;
+    position: absolute;
+    will-change: transform, opacity;
+}
+
+.usage-item::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    padding: 1.5px;
+    background: linear-gradient(86.94deg, rgba(99, 86, 254, 0.28) 0.62%, rgba(118, 74, 239, 0.28) 30.62%, rgba(138, 62, 223, 0.28) 61.67%, rgba(163, 48, 203, 0.28) 99.38%);
+    -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    mask-composite: exclude;
+    z-index: 1;
+    transition: .3s;
+    border-radius: 16px;
+
+}
+
+.usage-item-title {
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 24px;
+    color: var(--white);
+}
+
+.usage-item-text {
+    font-size: 18px;
+    font-weight: 300;
+    line-height: 22px;
+    color: var(--white);
+    opacity: .7;
+    margin-top: 8px;
+}
+
+.usage-cnt {
+    position: relative;
+    width: 100%;
+    padding: 40px 0;
+}
+
+.usage-item--one {
+    top: 0;
+    left: 82px;
+}
+
+.usage-item--two {
+    left: 0;
+    top: 272px;
+}
+
+.usage-item--tree {
+    left: 183px;
+    bottom: 0;
+}
+
+.usage-item--for {
+    bottom: 141px;
+    right: 78px;
+}
+
+.usage-item--five {
+    right: 0;
+    top: 148px;
+}
+
+.advantages-section {
+    position: relative;
+    min-height: 858px;
+    margin-top: 160px;
+}
+
+.advantages-section::after {
+    content: "";
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background-image: url('../images/advangesFon.png');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.icon-advantages {
+    background: linear-gradient(86.94deg, #6356FE 0.62%, #764AEF 30.62%, #8A3EDF 61.67%, #A330CB 99.38%);
+    font-size: 40px;
+}
+
+.icon-advantages2 {
+    background: linear-gradient(86.94deg, #6356FE 0.62%, #764AEF 30.62%, #8A3EDF 61.67%, #A330CB 99.38%);
+    font-size: 40px;
+}
+
+.icon-advantages3 {
+    background: linear-gradient(86.94deg, #6356FE 0.62%, #764AEF 30.62%, #8A3EDF 61.67%, #A330CB 99.38%);
+    font-size: 40px;
+}
+
+.advantages-cnt {
+    max-width: 1228px;
+    margin: 60px auto 0;
+    padding: 0 14px;
+    width: 100%;
+}
+
+
+.advantages-item {
+    padding: 24px 24px 30px 24px;
+    background: #1E1E20;
+    border-radius: 20px;
+    position: relative;
+    box-shadow: 0px 0px 16px 0px #00000029;
+    max-width: 386px;
+
+
+}
+
+.advantages-item::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    padding: 1px;
+    background: linear-gradient(105.61deg, rgba(255, 255, 255, 0.04) 0%, rgba(255, 255, 255, 0) 100%);
+    -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    mask-composite: exclude;
+    z-index: 1;
+    transition: .3s;
+    border-radius: 20px;
+}
+
+.advantages-slider-column {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.advantages-item-icon {
+    position: relative;
+    background: #1E1E20;
+    border-radius: 12px;
+    width: 60px;
+    height: 60px;
+    box-shadow: 0px 0px 16px 0px #00000029;
+
+
+}
+
+.advantages-item-icon::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    padding: 2px;
+    background: linear-gradient(105.61deg, rgba(255, 255, 255, 0.04) 0%, rgba(255, 255, 255, 0) 100%);
+    -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    mask-composite: exclude;
+    z-index: 1;
+    transition: .3s;
+    border-radius: 12px;
+}
+
+.advantages-item-title {
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 24px;
+    color: var(--white);
+    margin-top: 20px;
+}
+
+.advantages-item-sub {
+    font-size: 18px;
+    font-weight: 300;
+    line-height: 22px;
+    opacity: .7;
+    margin-top: 12px;
+    color: var(--white);
+
+}
+
+.advantages-avatars {
+    padding: 24px 24px 36px 24px;
+    background: #1E1E20;
+    border-radius: 24px;
+    position: relative;
+    box-shadow: 0px 0px 16px 0px #00000029;
+    overflow: hidden;
+    max-width: 1228px;
+    margin: 24px auto 0;
+
+
+}
+
+.advantages-avatar-items {
+    gap: 12px;
+
+}
+
+.advantages-avatar-items::-webkit-scrollbar {
+    display: none;
+}
+
+.advantages-avatars::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    padding: 1.5px;
+    border: 1px solid;
+    background: linear-gradient(105.61deg, rgba(255, 255, 255, 0.04) 0%, rgba(255, 255, 255, 0) 100%);
+    -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    mask-composite: exclude;
+    z-index: -1;
+    transition: .3s;
+    border-radius: 24px;
+}
+
+.big-avatar-item {
+    height: 320px;
+}
+
+
+.small-avatar-item {
+    height: 232px;
+}
+
+
+.advantages-avatar-item {
+    position: relative;
+    box-shadow: 0px 0px 16px 0px #00000029;
+    border-radius: 100px 100px 0 0;
+    max-width: 182px;
+    width: 100%;
+
+}
+
+.advantages-avatar-item::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    padding: 1px;
+    background: linear-gradient(105.61deg, rgba(255, 255, 255, 0.04) 0%, rgba(255, 255, 255, 0) 100%);
+    -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    mask-composite: exclude;
+    z-index: 1;
+    transition: .3s;
+    border-radius: 100px 100px 0 0;
+
+}
+
+.average-avatar-item {
+    height: 280px;
+}
+
+.advantages-avatar-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 100px 100px 0 0;
+}
+
+.advantages-btn {
+    max-width: 167px;
+    width: 100%;
+    margin-right: 30px;
+}
+
+.advantages-btn-cnt {
+    margin-top: 28px;
+}
+
+.avatar-hero-body {
+    gap: 20px;
+    max-width: 1068px;
+    justify-content: space-between;
+    margin: 0 auto;
+    padding: 60px 14px 0 14px;
+    position: relative;
+    z-index: 3;
+
+}
+
+.advantages-body {
+    position: relative;
+    z-index: 3;
+}
+
+.advantages-avatar-mobile {
+    display: none;
+}
+
+@keyframes advantages-scroll {
+    0% {
+        transform: translateX(0);
+    }
+    50% {
+        transform: translateX(-100%);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+
+
+.advantages-btn.active {
+    max-width: 180px;
+    margin-right: 0;
+}
+
+.advantages-label input[type = 'file'] {
+    display: none;
+}
+
+@media (max-width: 1400px) {
+}
+
+@media (max-width: 1200px) {
+
+
+}
+
+@media (max-width: 992px) {
+    .advantages-pagination {
+        position: inherit !important;
+        margin-top: 24px !important;
+    }
+
+    .collage-hero-body {
+        flex-direction: column;
+        gap: 48px;
+    }
+
+    .advantages-avatar-item {
+        min-width: 182px;
+    }
+
+    .advantages-section {
+        margin-top: 110px;
+    }
+
+    .advantages-avatars {
+        box-shadow: unset;
+        background: unset;
+        padding: 0;
+        max-width: 100%;
+    }
+
+    .advantages-btn-cnt {
+        margin-top: 40px;
+    }
+
+
+    .advantages-avatars::before {
+        display: none;
+    }
+
+    .advantages-cnt {
+        max-width: 100%;
+        padding: 0;
+        margin: 40px auto 0;
+
+    }
+
+    .advantages-slider-column {
+        max-width: 1228px;
+        margin: auto;
+        width: 100%;
+        padding: 0 14px;
+    }
+
+    .advantages-avatar-items {
+        gap: 12px;
+        animation: advantages-scroll 45s linear infinite;
+
+    }
+
+    .advantages-avatar-mobile {
+        display: block;
+    }
+
+
+}
+
+@media (max-width: 768px) {
+    .avatar-hero-body {
+        flex-direction: column;
+        align-items: center;
+        gap: 48px;
+    }
+
+    .avatar-hero-title {
+        text-align: center;
+    }
+
+    .usage-items {
+        position: initial;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 12px;
+        margin-top: 20px;
+    }
+
+    .usage-item-title {
+        font-size: 16px;
+        line-height: 20px;
+    }
+
+    .usage-item-text {
+        font-size: 16px;
+        line-height: 20px;
+    }
+
+    .icon-usage {
+        font-size: 17px;
+    }
+
+    .usage-item-icon {
+        flex: 0 0 30px;
+        height: 30px;
+    }
+
+    .usage-item {
+        position: relative;
+        left: unset;
+        bottom: unset;
+        top: unset;
+        right: unset;
+        padding: 20px;
+
+    }
+
+    .avatar-hero-sub {
+        text-align: center;
+    }
+
+    .usage-cnt {
+        flex-direction: column;
+        padding: 0;
+    }
+
+    .avatar-hero-btn {
+        max-width: 165px;
+        width: 100%;
+        margin: 18px auto 0;
+
+    }
+
+
+}
+
+@media (max-width: 576px) {
+
+    .avatar-hero-section {
+        position: relative;
+        min-height: 910px;
+        margin-top: 86px;
+    }
+
+    .usage-picture img {
+        border-radius: 16px;
+    }
+
+    .avatar-hero-titles {
+        padding-top: 0;
+    }
+
+    .avatar-hero-style {
+        height: 600px;
+    }
+
+    .avatar-card {
+        min-width: 200px;
+        height: 260px;
+        padding: 8px;
+
+    }
+
+    .avatar-card-clue {
+        font-size: 16px;
+        line-height: 20px;
+    }
+
+    .avatar-hero-section::after {
+        top: 300px;
+        left: 0;
+        height: 400px;
+        background-image: url('../images/avatarHeroBgMobile.png');
+
+    }
+
+    .advantages-item {
+        padding: 20px;
+    }
+
+    .advantages-item-title {
+        margin-top: 16px;
+        font-size: 16px;
+        line-height: 20px;
+
+    }
+
+    .advantages-section {
+        min-height: 660px;
+        margin-top: 80px;
+    }
+
+    .advantages-item-sub {
+        font-size: 16px;
+        line-height: 20px;
+        margin-top: 8px;
+    }
+
+    .avatar-cards {
+        gap: 12px;
+
+    }
+
+    .avatar-cards-cnt {
+        margin-top: -260px;
+    }
+
+    .icon-advantages {
+        font-size: 28px;
+    }
+
+    .advantages-item-icon {
+        width: 48px;
+        height: 48px;
+    }
+
+}

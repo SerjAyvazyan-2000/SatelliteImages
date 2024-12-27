@@ -1,0 +1,336 @@
+
+.face-hero-section {
+    position: relative;
+    min-height: 630px;
+    margin-top: 114px;
+}
+
+.face-hero-section::after {
+    content: "";
+    position: absolute;
+    top: -100px;
+    left: 0;
+    width: 100%;
+    height: 210%;
+    z-index: 1;
+    background-image: url('../images/faceHeroBg.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+
+.face-hero-body {
+    padding-top: 60px;
+}
+
+.face-hero-video {
+    max-width: 490px;
+    width: 100%;
+    height: 512px;
+    position: relative;
+
+}
+
+.image-position {
+    object-position: 0 0;
+}
+
+.image-position-top {
+    object-position: 0 -40px;
+
+}
+
+.face-hero-body {
+    gap: 90px;
+}
+
+.face-hero-titles {
+    max-width: 460px;
+    width: 100%;
+}
+
+.face-btn-cnt {
+    margin-top: 32px;
+    width: 100%
+}
+
+.face-hero-btn {
+    max-width: 167px;
+    width: 100%;
+    margin-right: 20px;
+    transition: .3s;
+}
+
+.face-hero-btn.active {
+    margin-right: 0;
+    max-width: 175px;
+
+}
+
+
+
+.improve-peculiarities-section {
+    position: relative;
+    min-height: 792px;
+    margin-top: 160px;
+}
+
+.improve-peculiarities-section::after {
+    content: "";
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background-image: url('../images/improveFon.png');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.face-peculiarities-body {
+    position: relative;
+    max-width: 1228px;
+    margin: auto;
+    padding: 0 14px;
+    width: 100%;
+    z-index: 2;
+    min-height: 1000px;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+.face-peculiarities-cnt {
+    margin-top: 102px;
+}
+
+.face-peculiarities-item {
+    max-width: 386px;
+    width: 100%;
+    position: absolute;
+    background: rgba(30, 30, 32, 1);
+    border-radius: 20px;
+    box-shadow: 0px 0px 32px 0px rgba(99, 86, 254, 0.12);
+    z-index: 2;
+    height: auto;
+
+}
+
+.face-peculiarities-item::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: 20px;
+    padding: 1px;
+    background: linear-gradient(86.94deg, rgba(99, 86, 254, 0.28) 0.62%, rgba(118, 74, 239, 0.28) 30.62%, rgba(138, 62, 223, 0.28) 61.67%, rgba(163, 48, 203, 0.28) 99.38%);
+    -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    mask-composite: exclude;
+    z-index: 1;
+
+    transition: .3s;
+}
+
+.face-peculiarities-item--one {
+    bottom: 20%;
+    left: 0;
+    will-change: transform;
+    transition: .3s;
+
+}
+
+.face-peculiarities-item--two {
+    bottom: 20%;
+    right: 0;
+    will-change: transform;
+    transition: .3s;
+}
+
+.face-peculiarities-item--tree {
+    bottom: 20%;
+    left: 50%;
+    transform: translate(-50%);
+    z-index: 3;
+    transition: .3s;
+    will-change: transform;
+}
+
+.face-peculiarities-img {
+    max-height: 140px;
+    height: 100%;
+}
+
+.face-peculiarities-img img {
+    height: 100%;
+    object-fit: cover;
+}
+
+.before-after-slider {
+    position: relative;
+    width: 100%;
+}
+
+.face-peculiarities-section::after {
+    content: "";
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background-image: url('../images/facePeculiaritiesFon.png');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.face-peculiarities-section {
+    position: relative;
+    min-height: 1000px;
+    margin-top: 160px;
+}
+
+
+.before-image, .after-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.before-image img, .after-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.face-reviews-left-img {
+    height: 260px;
+
+}
+
+.face-reviews-left-img img {
+    border-radius: 20px;
+    width: 100%;
+    object-fit: cover;
+}
+
+.after-image {
+    clip-path: inset(0 50% 0 0); /* Показывать только правую часть изображения */
+}
+
+@media (max-width: 1400px) {
+}
+
+@media (max-width: 1200px) {
+
+
+}
+
+@media (max-width: 992px) {
+    .face-hero-body {
+        flex-direction: column;
+    }
+    .image-position-top {
+        object-position: 0 0;
+
+    }
+    .face-reviews-left-img {
+        height: 237px;
+    }
+
+
+    .face-hero-title {
+        text-align: center;
+    }
+
+    .face-hero-sub {
+        text-align: center;
+    }
+
+    .face-btn-cnt {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .face-peculiarities-section {
+        min-height: 800px;
+        margin-top: 100px;
+    }
+
+    .face-peculiarities-body {
+        min-height: 800px;
+    }
+
+}
+
+@media (max-width: 768px) {
+    .face-peculiarities-item {
+        position: initial;
+    }
+
+    .face-peculiarities-item--tree {
+        transform: translate(0);
+    }
+
+    .face-peculiarities-cnt {
+        display: flex;
+        margin-top: 40px;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 20px;
+    }
+}
+
+@media (max-width: 576px) {
+    .face-hero-section {
+        min-height: 670px;
+        margin-top: 86px;
+    }
+
+    .face-btn-cnt {
+        margin-top: 28px;
+    }
+
+    .face-peculiarities-section {
+        margin-top: 80px;
+    }
+
+    .face-hero-section::after {
+        content: "";
+        top: -50px;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 1;
+        background-image: url('../images/faceHeroBgMobile.png');
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+
+    .face-hero-video {
+        max-width: 490px;
+        height: 340px;
+
+    }
+
+    .face-hero-body {
+        gap: 48px;
+    }
+    .face-peculiarities-item {
+        border-radius: 16px;
+    }
+
+    .face-peculiarities-item::before {
+        border-radius: 16px;
+    }
+    .face-peculiarities-section::after {
+        background-image: url('../images/faceFonMobile.png');
+    }
+}

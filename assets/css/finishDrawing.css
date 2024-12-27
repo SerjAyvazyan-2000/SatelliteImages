@@ -1,0 +1,269 @@
+
+.drawing-hero-section {
+    position: relative;
+    min-height: 850px;
+    margin-top: 114px;
+
+}
+
+.drawing-hero-section::after {
+    content: "";
+    position: absolute;
+    top: -120px;
+    left: 0;
+    width: 100%;
+    height: 180%;
+    z-index: 1;
+    background-image: url('../images/drawingHeroBg.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.drawing-hero-titles {
+    position: relative;
+
+}
+
+.drawing-hero-video {
+    max-width: 960px;
+    width: 100%;
+    height: 460px;
+    position: relative;
+    margin: 60px auto 0;
+    box-shadow: 0px 0px 32px 0px rgba(99, 86, 254, 0.12);
+    border-radius: 20px;
+
+}
+
+.drawing-hero-video::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: 20px;
+    padding: 1.5px;
+    background: linear-gradient(86.94deg, rgba(99, 86, 254, 0.28) 0.62%, rgba(118, 74, 239, 0.28) 30.62%, rgba(138, 62, 223, 0.28) 61.67%, rgba(163, 48, 203, 0.28) 99.38%);
+    -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    mask-composite: exclude;
+    transition: .3s;
+}
+
+.drawing-hero-body {
+    padding: 61px 0 0;
+    position: relative;
+}
+
+.drawing-hero-item {
+    position: absolute;
+
+}
+
+
+.drawing-btn-cnt {
+    width: 100%;
+    margin-top: 32px;
+}
+
+.drawing-hero-btn {
+    max-width: 159px;
+    width: 100%;
+    margin-right: 20px;
+
+}
+
+.drawing-hero-btn.active {
+    max-width: 170px;
+    margin-right: 0;
+
+}
+
+.drawing-hero-item--one {
+    left: 0;
+    top: -30px;
+}
+
+.drawing-hero-item--two {
+    right: 0;
+    top: -50px;
+}
+
+.drawing-hero-item--tree {
+    left: 269px;
+    bottom: -20px;
+}
+
+.drawing-hero-item--for {
+    right: 221px;
+    bottom: 20px;
+}
+
+.drawing-hero-mobile {
+    display: none;
+}
+.icon-peculiarities-drawing{
+     font-size: 24px;
+    background: linear-gradient(86.94deg, #6356FE 0.62%, #764AEF 30.62%, #8A3EDF 61.67%, #A330CB 99.38%);
+
+}
+
+.drawing-item-picture{
+    border-radius: 20px;
+    height: 400px;
+}
+.collage-peculiarities-picture{
+    max-width: 692px;
+    height: 400px;
+    width: 100%;
+}
+
+.drawing-item-picture img {
+    border-radius: 20px;
+    width: 100%;
+    object-fit: cover;
+    height: 100%;
+}
+.finish-advantages-video .videoPlayer{
+    border-radius: 12px!important;
+    margin-top: 10px;
+}
+.finish-advantages-btn{
+    margin-top: 36px;
+}
+@media (max-width: 1400px) {
+}
+
+@media (max-width: 1200px) {
+
+    .drawing-hero-item--tree {
+        left: 0;
+        bottom: 0;
+    }
+
+    .drawing-hero-item--for {
+        right: 0;
+        bottom: 0;
+    }
+
+
+}
+
+@media (max-width: 992px) {
+    .face-hero-body {
+        flex-direction: column;
+    }
+
+    .face-reviews-left-img {
+        height: 237px;
+    }
+
+
+    .face-hero-title {
+        text-align: center;
+    }
+
+    .face-hero-sub {
+        text-align: center;
+    }
+
+
+
+    .face-peculiarities-section {
+        min-height: 800px;
+        margin-top: 100px;
+    }
+
+    .face-peculiarities-body {
+        min-height: 800px;
+    }
+
+}
+
+@media (max-width: 768px) {
+    .drawing-hero-mobile {
+        display: block;
+        position: absolute;
+    }
+
+
+    .drawing-hero-video {
+        height: 260px;
+    }
+
+    .drawing-hero-desktop {
+        display: none;
+    }
+
+    .drawing-hero-item--tree {
+        left: unset;
+        right: 0;
+    }
+
+    .drawing-hero-body {
+        padding: 132px 0 0;
+        position: relative;
+    }
+
+    .drawing-hero-item--one {
+        top: -120px;
+    }
+
+    .drawing-hero-item--tree {
+        top: -80px;
+    }
+    .drawing-mobile--one{
+        right: 10px;
+        bottom: -130px;
+    }
+    .drawing-mobile--two{
+        left: 20px;
+        bottom: -100px;
+    }
+
+}
+@media (max-width: 576px) {
+
+    .drawing-hero-item--one{
+        max-width: 100px;
+        top: -130px;
+
+    }
+    .drawing-hero-section::after {
+        background-image: url('../images/drawingHeroBgMobile.png');
+
+    }
+    .drawing-item-picture{
+        border-radius: 20px;
+        height: 204px;
+    }
+    .drawing-hero-item--tree{
+         max-width: 60px;
+    }
+    .drawing-hero-video {
+        height: 166px;
+        border-radius: 16px;
+        margin: 40px auto 0;
+    }
+    .drawing-hero-video .videoPlayer{
+        border-radius: 16px;
+
+    }
+    .collage-peculiarities-picture{
+        height: max-content;
+    }
+    .drawing-hero-section {
+        position: relative;
+        min-height: 670px;
+        margin-top: 84px;
+
+    }
+    .drawing-mobile--two{
+        max-width: 70px;
+    }
+    .drawing-mobile--one{
+        max-width: 90px;
+    }
+    .drawing-btn-cnt{
+        margin-top: 28px;
+    }
+}

@@ -1,0 +1,230 @@
+
+.collage-hero-section {
+    position: relative;
+    min-height: 804px;
+    margin-top: 114px;
+}
+
+
+.collage-hero-section::after {
+    content: "";
+    position: absolute;
+    top: -130px;
+    left: 0;
+    width: 100%;
+    height: 190%;
+    z-index: 1;
+    background-image: url('../images/collageHeroBg.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+
+.collage-hero-video {
+    width: 480px;
+    height: 560px;
+    position: relative;
+}
+
+.collage-hero-video::after {
+    content: '';
+    width: 100%;
+    height: 140px;
+    bottom: -120px;
+    position: absolute;
+    background: linear-gradient(
+            180deg,
+            rgba(23, 23, 23, .9) 50%,
+            rgba(23, 23, 23, .9) 10%,
+            rgba(23, 23, 23, .9) 10%
+    );
+    backdrop-filter: blur(30px);
+    -webkit-backdrop-filter: blur(30px);
+    box-shadow: 0 0 150px 150px rgba(23, 23, 23, 1);
+    z-index: 1;
+    pointer-events: none;
+}
+
+
+.collage-video {
+    max-width: 400px;
+    height: 400px;
+    width: 100%;
+    position: relative;
+    margin-top: 30px;
+
+}
+
+
+.advantages-collage {
+    width: 100%;
+    margin-top: 40px;
+
+}
+
+.advantages-collage-fon {
+    max-width: 800px;
+    width: 100%;
+    height: 448px;
+}
+
+
+.advantages-collage-video {
+    max-width: 756px;
+    width: 100%;
+    height: 418px;
+    position: relative;
+}
+
+.advantages-collage-video::after {
+    content: '';
+    width: 100%;
+    height: 140px;
+    bottom: -120px;
+    position: absolute;
+    background: linear-gradient(
+            180deg,
+            rgba(23, 23, 23, .9) 50%,
+            rgba(23, 23, 23, .9) 10%,
+            rgba(23, 23, 23, .9) 10%
+    );
+    backdrop-filter: blur(30px);
+    -webkit-backdrop-filter: blur(30px);
+    box-shadow: 0 0 150px 150px rgba(23, 23, 23, 1);
+    z-index: 1;
+    pointer-events: none;
+}
+
+.collage-hero-btn.active {
+    margin-right: 0;
+    max-width: 175px;
+
+}
+
+.collage-hero-btn {
+    max-width: 159px;
+    width: 100%;
+    margin-right: 30px;
+    transition: .3s;
+}
+
+.advantages-collage-video .videoPlayer {
+    border-radius: 0;
+}
+
+.collage-btn-cnt {
+    margin-top: 32px;
+}
+
+.advantages-collage-gif img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.collage-peculiarities-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 20px;
+}
+
+@media (max-width: 1400px) {
+}
+
+@media (max-width: 1200px) {
+
+
+}
+
+@media (max-width: 992px) {
+    .advantages-collage-fon {
+        max-width: 500px;
+        width: 100%;
+        height: 448px;
+        background-repeat: round;
+        background-position: unset;
+    }
+
+    .advantages-collage-video {
+        max-width: 450px;
+        height: 318px;
+    }
+
+
+}
+
+@media (max-width: 768px) {
+    .collage-btn-cnt {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-top: 28px;
+    }
+
+
+}
+
+@media (max-width: 576px) {
+    .collage-hero-section {
+        position: relative;
+        min-height: 585px;
+        margin-top: 86px;
+    }
+    .advantages-collage-fon {
+        max-width: 332px;
+        height: 220px;
+    }
+    .collage-peculiarities-img img {
+        border-radius: 16px;
+    }
+
+    .advantages-collage-video {
+        max-width: 314px;
+        height: 208px;
+    }
+    .advantages-collage {
+        margin-top: 31px;
+    }
+    .advantages-collage-video::after{
+        height: 120px;
+        bottom: -150px;
+        box-shadow: 0 0 150px 100px rgba(23, 23, 23, 1);
+    }
+    .collage-hero-section::after {
+        background-image: url('../images/collageHeroBgMobile.png');
+        height: 130%;
+    }
+
+    .collage-hero-video::after {
+        height: 100px;
+    }
+
+
+    .collage-hero-video {
+        width: 332px;
+        height: 388px;
+    }
+
+    .collage-video {
+        max-width: 276px;
+        height: 276px;
+        width: 100%;
+        position: relative;
+        margin-top: 30px;
+
+    }
+
+
+    .collage-hero-gif {
+        max-width: 276px;
+        height: 276px;
+    }
+}
+
+
+
+
+
+

@@ -1,0 +1,130 @@
+
+.logos-hero-section {
+    position: relative;
+    min-height: 650px;
+    margin-top: 114px;
+}
+
+.logo-hero-body {
+    padding-top: 140px;
+
+}
+
+.logo-hero-titles {
+    position: relative;
+    z-index: 5;
+    max-width: 460px;
+    width: 100%;
+}
+
+.logos-hero-section::after {
+    content: "";
+    position: absolute;
+    top: -140px;
+    left: 0;
+    width: 100%;
+    height: 180%;
+    z-index: 1;
+    background-image: url('../images/logoHeroBg.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.logos-hero-picture {
+    position: absolute;
+    max-width: 1440px;
+    z-index: 2;
+    right: 0;
+    top: -100px;
+    width: 100%;
+}
+
+/*.logos-hero-picture::after{*/
+/*    content: "";*/
+/*    position: absolute;*/
+/*    top: 0;*/
+/*    left: 0;*/
+/*    width: 100%;*/
+/*    height: 150%;*/
+/*    z-index: 1;*/
+/*    background-image: url('../images/logoHeroPicture.png');*/
+/*    background-size: cover;*/
+/*    background-position: center;*/
+/*    background-repeat: no-repeat;*/
+/*}*/
+.logo-mobile-picture {
+    display: none;
+}
+
+
+@media (max-width: 1400px) {
+}
+
+@media (max-width: 1200px) {
+    .logo-mobile-picture {
+        display: flex;
+        position: absolute;
+        left: 0;
+        top: -50px;
+        width: 100%;
+        height: 100%;
+    }
+
+    .logo-mobile-picture::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 240%;
+        z-index: 1;
+        background-image: url('../images/logoHeroPicture.png');
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+
+    .logos-hero-picture {
+        display: none;
+    }
+
+    .logo-hero-body {
+        flex-direction: column;
+        height: 700px;
+        align-items: center;
+
+    }
+}
+
+@media (max-width: 992px) {
+
+}
+
+@media (max-width: 768px) {
+
+}
+
+@media (max-width: 576px) {
+    .logo-hero-body {
+        flex-direction: column;
+        height: 700px;
+        padding-top: 60px;
+    }
+
+    .logo-mobile-picture::after {
+        height: 170%;
+        background-image: url('../images/logoHeroPictureMobile.png');
+
+    }
+
+    .logos-hero-section::after {
+        display: none;
+    }
+
+    .logos-hero-section {
+        min-height: 760px;
+        margin-top: 86px;
+    }
+
+}
