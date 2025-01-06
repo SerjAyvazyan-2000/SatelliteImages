@@ -216,15 +216,6 @@ window.addEventListener('scroll', handleScroll);
 
 
 
-document.querySelectorAll('.avatar-cards').forEach((column) => {
-    column.addEventListener('mouseover', () => {
-        column.style.animationPlayState = 'paused';
-    });
-
-    column.addEventListener('mouseout', () => {
-        column.style.animationPlayState = 'running';
-    });
-});
 
 document.querySelectorAll('.peculiarities-column--one').forEach((column) => {
     column.addEventListener('mouseover', () => {
@@ -345,3 +336,63 @@ document.querySelectorAll('.video-block').forEach(block => {
 
     videoPlayer.addEventListener('pause', playVideo);
 });
+
+
+
+
+const cardsContainer = document.querySelector('.avatar-cards');
+const containerWrapper = document.querySelector('.avatar-cards-cnt');
+let speed = 1;
+let animationId;
+
+function infiniteScroll() {
+    if(cardsContainer && containerWrapper){
+        const firstCardWidth = cardsContainer.firstElementChild.offsetWidth + 20;
+
+        let currentPosition = parseFloat(getComputedStyle(cardsContainer).transform.split(',')[4]) || 0;
+
+        // Сдвигаем контейнер влево
+        currentPosition -= speed;
+
+        // Когда первая карточка полностью уходит за пределы
+        if (Math.abs(currentPosition) >= firstCardWidth) {
+            const firstCard = cardsContainer.firstElementChild;
+            cardsContainer.appendChild(firstCard);  // Перемещаем первую карточку в конец
+            currentPosition = 0;  // Сбрасываем позицию, но не резко
+        }
+
+        // Применяем новый сдвиг
+        cardsContainer.style.transform = `translateX(${currentPosition}px)`;
+
+        // Повторяем анимацию
+        animationId = requestAnimationFrame(infiniteScroll);
+    }
+
+
+}
+
+function stopScroll() {
+    cancelAnimationFrame(animationId);
+}
+
+function startScroll() {
+    animationId = requestAnimationFrame(infiniteScroll);
+}
+if(containerWrapper){
+    containerWrapper.addEventListener('mouseenter', stopScroll);
+    containerWrapper.addEventListener('mouseleave', startScroll);
+}
+
+
+startScroll();
+
+
+
+
+
+
+
+
+
+
+

@@ -6,15 +6,27 @@
 
 .photo-hero-style {
     width: 320px;
-    height: 392px;
+    height: 470px;
     position: absolute;
     left: 0;
     top: -10px;
     background-size: cover;
     background-position: unset;
     background-repeat: no-repeat;
-    z-index: 3;
+    z-index: 4;
 
+}
+.photo-hero-style::before{
+    position: absolute;
+    content: '';
+    bottom: -100px;
+    left:-70px;
+    width: 123%;
+    height: 200px;
+    background-image: url('../images/mockupBlur.png');
+    background-size: cover;
+    background-position: unset;
+    background-repeat: no-repeat;
 }
 .photo-high-img{
     display: none;
@@ -189,9 +201,9 @@
     position: relative;
     background: rgba(30, 30, 32, 1);
     border-radius: 16px;
-    box-shadow: 0px 0px 16px 0px rgba(0, 0, 0, 0.16);
     transition: .3s;
     cursor: pointer;
+    box-shadow: 0px 0px 16px 0px rgba(0, 0, 0, 0.16);
 
 }
 
@@ -205,7 +217,6 @@
     -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
     mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
     mask-composite: exclude;
-    box-shadow: 0px 0px 16px 0px rgba(99, 86, 254, 0.08);
     transition: .3s;
 }
 
@@ -221,10 +232,14 @@
 
 .photo-tools-item:hover::before {
     background: linear-gradient(86.94deg, rgba(99, 86, 254, 0.28) 0.62%, rgba(118, 74, 239, 0.28) 30.62%, rgba(138, 62, 223, 0.28) 61.67%, rgba(163, 48, 203, 0.28) 99.38%);
+    box-shadow: 0px 0px 16px 0px rgba(0, 0, 0, 0.16);
+
 }
 
 .photo-tools-item.active::before {
     background: linear-gradient(86.94deg, rgba(99, 86, 254, 0.28) 0.62%, rgba(118, 74, 239, 0.28) 30.62%, rgba(138, 62, 223, 0.28) 61.67%, rgba(163, 48, 203, 0.28) 99.38%);
+    box-shadow: 0px 0px 16px 0px rgba(99, 86, 254, 0.08);
+
 }
 
 .photo-tools-title {
@@ -331,7 +346,10 @@
         align-items: center;
         justify-content: center;
     }
+    .photo-hero-style::before{
+        display: none;
 
+    }
 
 }
 
@@ -457,6 +475,13 @@
         z-index: 1;
         background-image: url('../images/photoHeroBgMobile.png');
         background-position: unset;
+
+    }
+    .photo-hero-style::before{
+        display: block;
+        bottom: -150px;
+        left: -70px;
+        width: 223%;
 
     }
 

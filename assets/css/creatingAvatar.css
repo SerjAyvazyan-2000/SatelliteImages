@@ -97,7 +97,8 @@
 
 
 .avatar-cards-cnt {
-    max-width: 1440px;
+    max-width: 1920px;
+    overflow: hidden;
     width: 100%;
     margin: -270px auto 0;
     position: relative;
@@ -106,21 +107,10 @@
 
 .avatar-cards {
     gap: 20px;
-    animation: scroll-left 45s linear infinite;
 
 }
 
-@keyframes scroll-left {
-    0% {
-        transform: translateX(0);
-    }
-    50% {
-        transform: translateX(-100%);
-    }
-    100% {
-        transform: translateX(0);
-    }
-}
+
 
 .avatar-card-icon {
     position: relative;

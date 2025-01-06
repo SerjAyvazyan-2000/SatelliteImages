@@ -236,17 +236,21 @@ function initSwiper() {
     });
     const swiperContainer = document.querySelector(".reviews-swiper");
 
-    swiperContainer.addEventListener("mouseenter", () => {
-        reviewsSwiper.autoplay.stop();
-    });
+    if(swiperContainer){
 
-    swiperContainer.addEventListener("mouseleave", () => {
-        reviewsSwiper.autoplay.start();
-    });
+        swiperContainer.addEventListener("mouseenter", () => {
+            reviewsSwiper.autoplay.stop();
+        });
+
+        swiperContainer.addEventListener("mouseleave", () => {
+            reviewsSwiper.autoplay.start();
+        });
+    }
+
 }
 
 
-window.addEventListener("resize", initSwiper);
+// window.addEventListener("resize", initSwiper);
 initSwiper();
 
 
@@ -289,10 +293,10 @@ let creatingSwiper = new Swiper(".creating-swiper", {
     initialSlide: 2,
     coverflowEffect: {
         rotate: 0,
-        stretch: 1,
-        depth: 100,
+        stretch: 0,
+        depth: 50,
         modifier: 3,
-        slideShadows: true,
+        slideShadows: false,
     },
     navigation: {
         nextEl: ".creating-button-next",
@@ -302,7 +306,7 @@ let creatingSwiper = new Swiper(".creating-swiper", {
 
         320: {
             slidesPerView: 1,
-            effect: "slide", // Используем обычный слайдер на маленьких экранах
+            effect: "slide",
             centeredSlides: false,
             loop: false,
             coverflowEffect: {}  // Убираем эффект
@@ -323,10 +327,18 @@ let creatingSwiper = new Swiper(".creating-swiper", {
 
         },
         1200: {
-            slidesPerView: 3.5,
+            slidesPerView: 4,
         },
     }
 
+});
+
+const slides = document.querySelectorAll(".creating-swiper .swiper-slide");
+
+slides.forEach((slide, index) => {
+    slide.addEventListener("click", () => {
+        creatingSwiper.slideTo(index);
+    });
 });
 
 let creatingSwiperMobile = new Swiper(".creating-mobile-swiper", {

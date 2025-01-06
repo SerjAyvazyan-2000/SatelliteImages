@@ -13,8 +13,19 @@
 
 }
 
+
+
 .remove-hero-sub {
     text-align: center;
+}
+
+.image-position40 {
+    object-position: 0 -60px;
+}
+
+.image-position30 {
+    object-position: 0 -30px;
+
 }
 
 .remove-hero-title {
@@ -104,7 +115,6 @@
     z-index: 3;
 
 }
-
 
 
 .peculiarities-title {
@@ -364,6 +374,7 @@
     .peculiarities-title {
         max-width: 102px;
     }
+
     .peculiarities-description {
         padding: 16px 24px 20px 20px;
         backdrop-filter: blur(30px);
@@ -414,6 +425,7 @@
     .peculiarities-cnt {
         margin-top: 80px;
     }
+
     .remove-img--one {
         top: -10px;
         width: 120px;

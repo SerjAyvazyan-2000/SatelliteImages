@@ -126,7 +126,7 @@ document.addEventListener("DOMContentLoaded", () => {
         gsap.to('.peculiarities-item--one', {
             scrollTrigger: {
                 trigger: '.peculiarities-item--one', // Триггером будет сама карточка
-                start: 'top center', // Анимация начинается, когда карточка достигает центра экрана
+                start: 'top top', // Анимация начинается, когда карточка достигает центра экрана
                 end: '+=500', // Длительность анимации на скролле
                 scrub: true, // Связываем скролл с анимацией
 
@@ -142,7 +142,7 @@ document.addEventListener("DOMContentLoaded", () => {
         gsap.to('.peculiarities-item--two', {
             scrollTrigger: {
                 trigger: '.peculiarities-item--two', // Триггер для второй карточки
-                start: 'top center-=300', // Начать анимацию немного позже (на 200px)
+                start: 'top center-=600', // Начать анимацию немного позже (на 200px)
                 end: '+=500',
                 scrub: true,
             },
@@ -435,5 +435,43 @@ document.addEventListener("DOMContentLoaded", () => {
     window.addEventListener('resize', () => {
         ScrollTrigger.getAll().forEach(trigger => trigger.kill());
         initAnimationUsage();
+    });
+});
+
+
+document.querySelectorAll('.example').forEach(item => {
+    item.addEventListener('click', function() {
+        const newImage = this.getAttribute('data-image');
+
+        const backgroundLayer = document.querySelector('.background-layer img');
+
+        const newImg = new Image();
+        newImg.src = newImage;
+        newImg.style.opacity = 0;
+
+        newImg.onload = () => {
+            backgroundLayer.src = newImg.src;
+
+            gsap.fromTo(
+                backgroundLayer,
+                { clipPath: "circle(0% at 50% 0%)", opacity: 1 },
+                {
+                    clipPath: "circle(150% at 50% 100%)",
+                    duration: 1.5,
+                    ease: "power2.inOut",
+                    onStart: () => {
+                        newImg.style.opacity = 1;
+                    },
+                    onComplete: () => {
+                        gsap.to(backgroundLayer, {
+                            opacity: 1,
+                            duration: 0.5
+                        });
+                    }
+                }
+            );
+        };
+
+
     });
 });

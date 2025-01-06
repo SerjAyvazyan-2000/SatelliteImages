@@ -67,6 +67,7 @@
     position: relative;
     max-width: 386px;
     width: 100%;
+    cursor: pointer;
 
 }
 
@@ -104,15 +105,20 @@
 }
 
 .creating-button-prev {
-    left: 140px !important;
+    left: 20px !important;
+    width: 40px !important;
+    height: 40px !important;
 }
 
 .creating-button-next {
-    right: 140px !important;
+    right: 20px !important;
+    width: 40px !important;
+    height: 40px !important;
 }
 
 .creating-button-prev::after {
     display: none;
+
 }
 
 .creating-button-next::after {

@@ -906,7 +906,7 @@
     position: absolute;
     content: '';
     left: 50%;
-    background-image: url('../images/suitableDecor.png');
+    background-image: url('../images/suitableDecor.svg');
     top: 50%;
     transform: translate(-50%, -50%);
     width: 552px;
