@@ -342,8 +342,8 @@ document.querySelectorAll('.video-block').forEach(block => {
 
 const cardsContainer = document.querySelector('.avatar-cards');
 const containerWrapper = document.querySelector('.avatar-cards-cnt');
-let speed = 1;
-let animationId;
+let speedAvatars = 1;
+let animationAvatarsId;
 
 function infiniteScroll() {
     if(cardsContainer && containerWrapper){
@@ -352,7 +352,7 @@ function infiniteScroll() {
         let currentPosition = parseFloat(getComputedStyle(cardsContainer).transform.split(',')[4]) || 0;
 
         // Сдвигаем контейнер влево
-        currentPosition -= speed;
+        currentPosition -= speedAvatars;
 
         // Когда первая карточка полностью уходит за пределы
         if (Math.abs(currentPosition) >= firstCardWidth) {
@@ -365,18 +365,18 @@ function infiniteScroll() {
         cardsContainer.style.transform = `translateX(${currentPosition}px)`;
 
         // Повторяем анимацию
-        animationId = requestAnimationFrame(infiniteScroll);
+        animationAvatarsId = requestAnimationFrame(infiniteScroll);
     }
 
 
 }
 
 function stopScroll() {
-    cancelAnimationFrame(animationId);
+    cancelAnimationFrame(animationAvatarsId);
 }
 
 function startScroll() {
-    animationId = requestAnimationFrame(infiniteScroll);
+    animationAvatarsId = requestAnimationFrame(infiniteScroll);
 }
 if(containerWrapper){
     containerWrapper.addEventListener('mouseenter', stopScroll);
@@ -389,13 +389,14 @@ startScroll();
 
 
 const columnsAnimate = document.querySelectorAll('.peculiarities-column--one'); // Выбираем все колонки
-
+let speed1 = 1;
+let animationId1;
 function infiniteScrollColumns() {
     columnsAnimate.forEach(columns => {
         const firstCardWidth = columns.firstElementChild.offsetWidth + 10;
         let currentPositionColumns = parseFloat(getComputedStyle(columns).transform.split(',')[4]) || 0;
 
-        currentPositionColumns -= speed;
+        currentPositionColumns -= speed1;
 
         // Когда первая карточка выходит за пределы
         if (Math.abs(currentPositionColumns) >= firstCardWidth) {
@@ -408,15 +409,15 @@ function infiniteScrollColumns() {
     });
 
     // Повторяем анимацию
-    animationId = requestAnimationFrame(infiniteScrollColumns);
+    animationId1 = requestAnimationFrame(infiniteScrollColumns);
 }
 
 function stopScrollColumns() {
-    cancelAnimationFrame(animationId);
+    cancelAnimationFrame(animationId1);
 }
 
 function startScrollColumns() {
-    animationId = requestAnimationFrame(infiniteScrollColumns);
+    animationId1 = requestAnimationFrame(infiniteScrollColumns);
 }
 columnsAnimate.forEach(columns => {
     columns.addEventListener('mouseenter', stopScrollColumns);
@@ -431,6 +432,7 @@ infiniteScrollColumns();
 
 const columnsAnimate3 = document.querySelector('.peculiarities-column--tree');
 let animationI3;
+let speed3 = 1;
 
 function infiniteScrollRight() {
 
@@ -438,7 +440,7 @@ function infiniteScrollRight() {
 
         const firstCardWidth = columnsAnimate3.firstElementChild.offsetWidth + 10; // Ширина первой карточки с отступом
         let currentPosition3 = parseFloat(getComputedStyle(columnsAnimate3).transform.split(',')[4]) || 0; // Текущая позиция
-        currentPosition3 -= speed;
+        currentPosition3 -= speed3;
 
         // Когда первая карточка выходит за пределы, перемещаем её в конец
         if (Math.abs(currentPosition3) >= firstCardWidth) {
