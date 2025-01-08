@@ -114,6 +114,47 @@
     right: 20px !important;
     width: 40px !important;
     height: 40px !important;
+
+
+}
+
+.creating-arrow {
+    backdrop-filter: blur(6px);
+    background: rgba(0, 0, 0, 0.75);
+    position: relative;
+    border-radius: 8px;
+    transition: .3s;
+}
+
+.creating-arrow::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    padding: 2px;
+    background: linear-gradient(86.94deg, rgba(99, 86, 254, 0.28) 0.62%, rgba(118, 74, 239, 0.28) 30.62%, rgba(138, 62, 223, 0.28) 61.67%, rgba(163, 48, 203, 0.28) 99.38%);
+    -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    mask-composite: exclude;
+    z-index: 1;
+    transition: .3s;
+    border-radius: 8px;
+
+}
+
+.creating-arrow:hover {
+    box-shadow: 0px 0px 16px 0px rgba(99, 86, 254, 0.08);
+    background: #2b2b2b;
+}
+
+.slider-arrow-left {
+    font-size: 20px;
+    background: white;
+    transform: rotate(180deg);
+}
+
+.slider-arrow-right {
+    font-size: 20px;
+    background: white;
 }
 
 .creating-button-prev::after {
@@ -198,6 +239,7 @@
 .slide-more-icon {
     width: 23px;
     height: 23px;
+    margin-top: 2px;
 }
 
 .slide-more-icon img {
@@ -305,20 +347,21 @@
 
 }
 
-.peculiarities-column--one {
-    animation: scroll-left 45s linear infinite;
 
+
+@keyframes scrollRightColumn {
+    0% {
+        transform: translateX(-100%);
+    }
+    100% {
+        transform: translateX(0);
+    }
 }
 
 .peculiarities-column--two {
-    animation: scroll-right 45s linear infinite;
-
+    animation: scrollRightColumn 20s linear infinite;
 }
 
-.peculiarities-column--tree {
-    animation: scroll-left 45s linear infinite;
-
-}
 
 .peculiarities-small-picture {
     min-width: 152px;

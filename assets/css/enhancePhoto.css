@@ -231,8 +231,10 @@
 }
 
 .photo-tools-item:hover::before {
-    background: linear-gradient(86.94deg, rgba(99, 86, 254, 0.28) 0.62%, rgba(118, 74, 239, 0.28) 30.62%, rgba(138, 62, 223, 0.28) 61.67%, rgba(163, 48, 203, 0.28) 99.38%);
     box-shadow: 0px 0px 16px 0px rgba(0, 0, 0, 0.16);
+    background: linear-gradient(86.94deg, rgba(99, 86, 254, 0.28) 0.62%, rgba(118, 74, 239, 0.28) 30.62%, rgba(138, 62, 223, 0.28) 61.67%, rgba(163, 48, 203, 0.28) 99.38%);
+
+
 
 }
 

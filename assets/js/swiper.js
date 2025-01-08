@@ -197,9 +197,10 @@ let swiperResult2 = new Swiper(".tools-swiper-result2", {
 });
 
 
-let reviewsSwiper;
 
 function initSwiper() {
+    let reviewsSwiper;
+
     const isMobile = window.innerWidth <= 992;
     const direction = isMobile ? "horizontal" : "vertical";
 
@@ -249,8 +250,6 @@ function initSwiper() {
 
 }
 
-
-// window.addEventListener("resize", initSwiper);
 initSwiper();
 
 
@@ -425,6 +424,7 @@ function initializeSlides() {
 }
 
 initializeSlides();
+
 
 
 

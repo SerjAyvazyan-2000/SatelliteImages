@@ -439,39 +439,79 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 
+// document.querySelectorAll('.example').forEach(item => {
+//     item.addEventListener('click', function () {
+//         const newImage = this.getAttribute('data-image');
+//         const stylesheet = document.styleSheets[0]; // Получаем первую таблицу стилей
+//
+//         // Удаляем старое правило, если оно уже существует
+//         Array.from(stylesheet.cssRules).forEach((rule, index) => {
+//             if (rule.selectorText === ".background-layer::after") {
+//                 stylesheet.deleteRule(index);
+//             }
+//         });
+//
+//         // Добавляем новое правило для изменения `background-image`
+//         stylesheet.insertRule(`
+//             .background-layer::after {
+//                 content: "";
+//                 position: absolute;
+//                 left: 0;
+//                 top: 0;
+//                 width: 100%;
+//                 height: 100%;
+//                 background-image: url('${newImage}');
+//                 background-position: center;
+//                 background-size: cover;
+//                 background-repeat: no-repeat;
+//                 z-index: 1;
+//                 border-radius: 16px;
+//             }
+//         `, stylesheet.cssRules.length);
+//
+//         // Анимация смены фона
+//         gsap.fromTo(
+//             document.querySelector('.background-layer'),
+//             { clipPath: "circle(0% at 50% 0%)" },
+//             {
+//                 clipPath: "circle(150% at 50% 100%)",
+//                 duration: 1.5,
+//                 ease: "power2.inOut"
+//             }
+//         );
+//     });
+// });
 document.querySelectorAll('.example').forEach(item => {
-    item.addEventListener('click', function() {
+    item.addEventListener('click', function () {
         const newImage = this.getAttribute('data-image');
+        const backgroundLayer = document.querySelector('.background-layer');
 
-        const backgroundLayer = document.querySelector('.background-layer img');
+        // Убираем старое правило для ::after, если оно уже существует
+        const stylesheet = document.styleSheets[0];
+        Array.from(stylesheet.cssRules).forEach((rule, index) => {
+            if (rule.selectorText === ".background-layer::after") {
+                stylesheet.deleteRule(index);
+            }
+        });
 
-        const newImg = new Image();
-        newImg.src = newImage;
-        newImg.style.opacity = 0;
-
-        newImg.onload = () => {
-            backgroundLayer.src = newImg.src;
-
-            gsap.fromTo(
-                backgroundLayer,
-                { clipPath: "circle(0% at 50% 0%)", opacity: 1 },
-                {
-                    clipPath: "circle(150% at 50% 100%)",
-                    duration: 1.5,
-                    ease: "power2.inOut",
-                    onStart: () => {
-                        newImg.style.opacity = 1;
-                    },
-                    onComplete: () => {
-                        gsap.to(backgroundLayer, {
-                            opacity: 1,
-                            duration: 0.5
-                        });
-                    }
-                }
-            );
-        };
-
+        // Добавляем новое правило с фоном
+        stylesheet.insertRule(`
+            .background-layer::after {
+                content: "";
+                position: absolute;
+                left: 0;
+                top: 0;
+                width: 100%;
+                height: 100%;
+                background-image: url('${newImage}');
+                background-position: center;
+                background-size: cover;
+                background-repeat: no-repeat;
+                z-index: 1;
+                border-radius: 16px;
+                transition:  0.6s ease-in-out;
+            }
+        `, stylesheet.cssRules.length);
 
     });
 });

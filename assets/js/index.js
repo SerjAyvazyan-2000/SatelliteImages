@@ -388,11 +388,90 @@ startScroll();
 
 
 
+const columnsAnimate = document.querySelectorAll('.peculiarities-column--one'); // Выбираем все колонки
+
+function infiniteScrollColumns() {
+    columnsAnimate.forEach(columns => {
+        const firstCardWidth = columns.firstElementChild.offsetWidth + 10;
+        let currentPositionColumns = parseFloat(getComputedStyle(columns).transform.split(',')[4]) || 0;
+
+        currentPositionColumns -= speed;
+
+        // Когда первая карточка выходит за пределы
+        if (Math.abs(currentPositionColumns) >= firstCardWidth) {
+            const firstCard = columns.firstElementChild;
+            columns.appendChild(firstCard);  // Перемещаем первую карточку в конец
+            currentPositionColumns = 0;  // Сбрасываем позицию
+        }
+
+        columns.style.transform = `translateX(${currentPositionColumns}px)`;  // Применяем сдвиг
+    });
+
+    // Повторяем анимацию
+    animationId = requestAnimationFrame(infiniteScrollColumns);
+}
+
+function stopScrollColumns() {
+    cancelAnimationFrame(animationId);
+}
+
+function startScrollColumns() {
+    animationId = requestAnimationFrame(infiniteScrollColumns);
+}
+columnsAnimate.forEach(columns => {
+    columns.addEventListener('mouseenter', stopScrollColumns);
+    columns.addEventListener('mouseleave', startScrollColumns);
+});
+
+infiniteScrollColumns();
 
 
 
 
 
+const columnsAnimate3 = document.querySelector('.peculiarities-column--tree');
+let animationI3;
+
+function infiniteScrollRight() {
+
+    if (columnsAnimate3) {
+
+        const firstCardWidth = columnsAnimate3.firstElementChild.offsetWidth + 10; // Ширина первой карточки с отступом
+        let currentPosition3 = parseFloat(getComputedStyle(columnsAnimate3).transform.split(',')[4]) || 0; // Текущая позиция
+        currentPosition3 -= speed;
+
+        // Когда первая карточка выходит за пределы, перемещаем её в конец
+        if (Math.abs(currentPosition3) >= firstCardWidth) {
+            const firstCard = columnsAnimate3.firstElementChild;
+            columnsAnimate3.appendChild(firstCard);  // Перемещаем первую карточку в конец
+            currentPosition3 = 0;  // Сбрасываем позицию
+        }
+
+        // Применяем новый сдвиг
+        columnsAnimate3.style.transform = `translateX(${currentPosition3}px)`;  // Двигаем вправо
+
+        // Продолжаем анимацию
+        animationI3 = requestAnimationFrame(infiniteScrollRight);
+    }
+}
+
+function stopScrollRight() {
+    cancelAnimationFrame(animationI3); // Останавливаем анимацию
+}
+
+function startScrollRight() {
+    animationI3 = requestAnimationFrame(infiniteScrollRight); // Запускаем анимацию
+}
+
+if (columnsAnimate3) {
+    columnsAnimate3.addEventListener('mouseenter', stopScrollRight);  // Останавливаем на наведении
+    columnsAnimate3.addEventListener('mouseleave', startScrollRight);  // Возобновляем на выходе
+}
+
+infiniteScrollRight();
 
 
+const container = document.querySelector('.peculiarities-column--two');
 
+const speedColumn = container.getAttribute('data-speed') || 20;
+container.style.animationDuration = `${speedColumn}s`;

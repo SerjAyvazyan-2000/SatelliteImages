@@ -1216,13 +1216,32 @@
     padding: 0 1px 16px 80px;
 
 }
+.faq-item.active .faq-item-icon {
+    background: rgba(255, 255, 255, 1);
 
+
+}
 .faq-item.active .faq-item-icon::after {
     transform: translate(-50%, -50%) rotate(-45deg);
+    background: black;
+
 }
 
 .faq-item.active .faq-item-icon span {
     transform: translate(-50%, -50%) rotate(45deg);
+    background: black;
+
+}
+.faq-item-header:hover .faq-item-icon{
+    background: rgba(255, 255, 255, 1);
+
+}
+.faq-item-header:hover .faq-item-icon::after {
+    background: black;
+}
+
+.faq-item-header:hover .faq-item-icon span {
+    background: black;
 }
 
 .faq-item-icon::after {
@@ -1294,6 +1313,7 @@
     flex: 0 0 32px;
     height: 32px;
     border-radius: 50%;
+    transition: .3s;
 
 
 }

@@ -196,3 +196,11 @@
     mask-image: url(enhanceAdvantages3.svg);
     -webkit-mask-image: url(enhanceAdvantages3.svg);
 }
+.slider-arrow-right{
+    mask-image: url(sliderArrow.svg);
+    -webkit-mask-image: url(sliderArrow.svg);
+}
+.slider-arrow-left{
+    mask-image: url(sliderArrow.svg);
+    -webkit-mask-image: url(sliderArrow.svg);
+}
