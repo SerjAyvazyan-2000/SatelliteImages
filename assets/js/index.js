@@ -259,14 +259,61 @@ $(document).ready(function () {
     });
 });
 
+
+
+
+
+
+
 document.addEventListener("DOMContentLoaded", () => {
     const items = document.querySelectorAll(".photo-tools-item");
-    const videos = document.querySelectorAll(".photo-tools-video");
+    const videos = document.querySelectorAll(".enhance-tools-images");
+
+    if (items.length > 0 && videos.length > 0) {
+        items[0].classList.add("active");
+        videos[0].classList.add("visible");
+        initializeTwentyTwenty(videos[0]);
+
+    }
+
+    items.forEach(item => {
+        item.addEventListener("click", () => {
+            const selectedId = item.getAttribute("data-id");
+
+            // Убираем активные классы
+            items.forEach(i => i.classList.remove("active"));
+            videos.forEach(video => video.classList.remove("visible"));
+
+            // Добавляем активные классы
+            item.classList.add("active");
+
+            const videoToShow = document.querySelector(`.enhance-tools-images[data-id="${selectedId}"]`);
+            if (videoToShow) {
+                videoToShow.classList.add("visible");
+                initializeTwentyTwenty(videoToShow);
+
+            }
+        });
+    });
+});
+function initializeTwentyTwenty(container) {
+    $(container).find(".possibilities-slider-picture").twentytwenty();
+}
+
+
+
+
+
+
+
+document.addEventListener("DOMContentLoaded", () => {
+    const items = document.querySelectorAll(".photo-tools-item");
+    const videos = document.querySelectorAll(".photo-tools-picture");
 
     if (items.length > 0 && videos.length > 0) {
         items[0].classList.add("active");
         videos.forEach((video, index) => {
-            video.style.display = index === 0 ? "block" : "none"; // Показываем только первое видео
+            video.style.display = index === 0 ? "block" : "none";
         });
     }
 
@@ -279,13 +326,19 @@ document.addEventListener("DOMContentLoaded", () => {
 
             item.classList.add("active");
 
-            const videoToShow = document.querySelector(`.photo-tools-video[data-id="${selectedId}"]`);
+            const videoToShow = document.querySelector(`.photo-tools-picture[data-id="${selectedId}"]`);
             if (videoToShow) {
                 videoToShow.style.display = "block";
             }
         });
     });
 });
+
+
+
+
+
+
 
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -319,6 +372,11 @@ document.addEventListener("DOMContentLoaded", () => {
     updateImages();
 });
 
+
+
+
+
+
 document.querySelectorAll('.video-block').forEach(block => {
     const videoPlayer = block.querySelector('.videoPlayer');
 
@@ -347,7 +405,7 @@ let animationAvatarsId;
 
 function infiniteScroll() {
     if(cardsContainer && containerWrapper){
-        const firstCardWidth = cardsContainer.firstElementChild.offsetWidth + 20;
+        const firstCardWidth = cardsContainer.firstElementChild.offsetWidth + 20 ;
 
         let currentPosition = parseFloat(getComputedStyle(cardsContainer).transform.split(',')[4]) || 0;
 
@@ -398,11 +456,10 @@ function infiniteScrollColumns() {
 
         currentPositionColumns -= speed1;
 
-        // Когда первая карточка выходит за пределы
         if (Math.abs(currentPositionColumns) >= firstCardWidth) {
             const firstCard = columns.firstElementChild;
-            columns.appendChild(firstCard);  // Перемещаем первую карточку в конец
-            currentPositionColumns = 0;  // Сбрасываем позицию
+            columns.appendChild(firstCard);
+            currentPositionColumns = 0;
         }
 
         columns.style.transform = `translateX(${currentPositionColumns}px)`;  // Применяем сдвиг
@@ -474,6 +531,16 @@ infiniteScrollRight();
 
 
 const container = document.querySelector('.peculiarities-column--two');
+if(container){
+    const speedColumn = container.getAttribute('data-speed') || 20;
+    container.style.animationDuration = `${speedColumn}s`;
+}
 
-const speedColumn = container.getAttribute('data-speed') || 20;
-container.style.animationDuration = `${speedColumn}s`;
+
+
+
+
+
+
+
+

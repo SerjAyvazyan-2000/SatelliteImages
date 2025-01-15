@@ -1,9 +1,4 @@
 
-.creating-hero-titles {
-    max-width: 590px;
-    width: 100%;
-}
-
 .create-peculiarities-section {
     position: relative;
     min-height: 940px;
@@ -35,21 +30,38 @@
     top: -120px;
     left: 0;
     width: 100%;
-    height: 150%;
+    height: 170%;
     z-index: 1;
-    background-image: url('../images/createHeroBg.png');
+    background-image: url('../images/createHeroBg.webp');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
 }
 
-.creating-hero-video {
-    max-width: 600px;
+.creating-hero-img {
+    max-width: 100%;
     width: 100%;
     position: relative;
-    height: 510px;
+    max-height: 624px;
+    margin-top: 60px;
 
 }
+
+.creating-hero-img::after {
+    content: '';
+    width: 100%;
+    height: 140px;
+    left: 0;
+    bottom: -120px;
+    position: absolute;
+    background: linear-gradient(180deg, rgba(23, 23, 23, .9) 50%, rgba(23, 23, 23, .9) 10%, rgba(23, 23, 23, .9) 10%);
+    backdrop-filter: blur(30px);
+    -webkit-backdrop-filter: blur(30px);
+    box-shadow: 0 0 150px 150px rgba(23, 23, 23, 1);
+    z-index: 1;
+    pointer-events: none;
+}
+
 
 .creating-tools-body {
     position: relative;
@@ -257,11 +269,6 @@
 
 }
 
-.create-btn-mobile {
-    display: none;
-    margin-right: 30px;
-}
-
 
 .create-peculiarities-item {
     max-width: 386px;
@@ -346,7 +353,6 @@
     border-radius: 16px;
 
 }
-
 
 
 @keyframes scrollRightColumn {
@@ -447,32 +453,18 @@
     margin-right: 0;
 
 }
+.creating-hero-body {
+    padding: 61px 0 0;
+    position: relative;
+}
 
 @media (max-width: 1400px) {
 }
 
 @media (max-width: 1200px) {
 
-    .creating-hero-body {
-        flex-direction: column;
-        padding-top: 60px;
-        gap: 12px;
-    }
-
-    .create-btn-mobile {
-        display: flex;
-    }
-
-    .create-btn-mobile.active {
-        margin-right: 0;
-    }
-
     .create-hero-btn {
         display: none;
-    }
-
-    .create-hero-title {
-        text-align: center;
     }
 
     .create-hero-sub {
@@ -482,7 +474,9 @@
 }
 
 @media (max-width: 992px) {
-
+    .creating-drawing {
+        display: none;
+    }
 
 }
 
@@ -573,13 +567,14 @@
     .create-peculiarities-item {
         padding: 20px;
     }
+    .creating-hero-img::after{
+        height: 140px;
+        bottom: -270px;
 
+    }
     .icon-peculiarities {
         font-size: 28px;
     }
 
-    .creating-hero-video {
-        height: 340px;
-    }
 
 }

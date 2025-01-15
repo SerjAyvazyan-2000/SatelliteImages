@@ -73,37 +73,8 @@
     padding: 18px;
 }
 
-.remove-hero-images {
-    position: absolute;
-}
 
-.remove-img--one {
-    left: 0;
-    top: 216px;
-    width: 224px;
-    height: 224px;
-}
 
-.remove-img--two {
-    top: 500px;
-    width: 140px;
-    height: 140px;
-    left: 153px;
-}
-
-.remove-img--tree {
-    top: 290px;
-    right: 0;
-    width: 200px;
-    height: 200px;
-}
-
-.remove-img--for {
-    top: 500px;
-    right: 101px;
-    width: 160px;
-    height: 160px
-}
 
 .remove-tools-info {
     max-width: 386px;
@@ -112,6 +83,7 @@
 .possibilities-item-header {
     position: relative;
 }
+
 
 .removal-peculiarities-section {
     position: relative;
@@ -325,54 +297,23 @@
 }
 
 @media (max-width: 1200px) {
-    .remove-img--for {
-        right: 0;
-    }
 
-    .remove-img--two {
-        left: 0;
-    }
 
 }
 
 @media (max-width: 992px) {
-    .remove-img--one {
-        top: 0;
-    }
 
-    .remove-img--tree {
-        top: 0;
 
-    }
 
     .remove-hero-body {
         padding: 132px 0 0;
     }
 
-    .remove-img--two {
-        bottom: -140px;
-        top: unset;
-        left: 0;
-    }
 
-    .remove-img--for {
-        bottom: -180px;
-        top: unset;
-        right: 0;
-    }
 }
 
 @media (max-width: 768px) {
 
-    .remove-img--one {
-        width: 150px;
-        height: 150px;
-    }
-
-    .remove-img--tree {
-        width: 120px;
-        height: 120px;
-    }
 
 
 }
@@ -422,23 +363,7 @@
         min-height: 584px;
     }
 
-    .remove-img--two {
-        width: 100px;
-        height: 100px;
-        bottom: -100px;
-    }
 
-    .remove-img--tree {
-        top: 40px;
-        width: 80px;
-        height: 80px;
-    }
-
-    .remove-img--for {
-        width: 120px;
-        height: 120px;
-        bottom: -130px;
-    }
 
     .remove-hero-section {
         margin-top: 85px;
@@ -449,11 +374,6 @@
         margin-top: 80px;
     }
 
-    .remove-img--one {
-        top: -10px;
-        width: 120px;
-        height: 120px;
-    }
 
 
 }

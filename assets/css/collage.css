@@ -69,19 +69,59 @@
     height: 448px;
 }
 
-
-.advantages-collage-video {
-    max-width: 756px;
+.advantages-collage-cnt {
+    max-width: 750px;
+    overflow: hidden;
     width: 100%;
-    height: 418px;
+    margin: 0 auto;
     position: relative;
+
 }
 
-.advantages-collage-video::after {
+.advantages-collage-pictures {
+    max-width: 780px;
+    width: 100%;
+    position: relative;
+    gap: 12px;
+    margin-top: 30px;
+}
+
+.advantages-collage-picture {
+    min-width: 225px;
+    max-width: 225px;
+    height: 400px;
+    width: 100%;
+}
+
+.advantages-collage-picture img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.advantages-collage-picture:first-child img {
+    border-radius: 10px 10px 0 0;
+}
+
+.advantages-collage-pictures {
+    animation: scrollLeftColumn 20s linear infinite;
+
+}
+
+@keyframes scrollLeftColumn {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+.advantages-collage-cnt::after {
     content: '';
     width: 100%;
     height: 100px;
-    bottom: -200px;
+    bottom: -100px;
     position: absolute;
     background: linear-gradient(
             180deg,
@@ -109,9 +149,6 @@
     transition: .3s;
 }
 
-.advantages-collage-video .videoPlayer {
-    border-radius: 0;
-}
 
 .collage-btn-cnt {
     margin-top: 32px;
@@ -147,11 +184,14 @@
         background-position: unset;
     }
 
-    .advantages-collage-video {
+    .advantages-collage-pictures {
         max-width: 450px;
         height: 318px;
     }
 
+    .advantages-collage-cnt {
+        max-width: 450px;
+    }
 
 }
 
@@ -172,26 +212,43 @@
         min-height: 585px;
         margin-top: 86px;
     }
+    .advantages-collage-cnt {
+        max-width: 300px;
+    }
+    .advantages-collage-picture {
+        min-width: 117px;
+        max-width: 117px;
+        height: 200px;
+        width: 100%;
+    }
+
     .advantages-collage-fon {
         max-width: 332px;
         height: 220px;
     }
+    .advantages-collage-cnt::after{
+        bottom: -160px;
+    }
+
     .collage-peculiarities-img img {
         border-radius: 16px;
     }
 
-    .advantages-collage-video {
+    .advantages-collage-pictures {
         max-width: 314px;
         height: 208px;
     }
+
     .advantages-collage {
         margin-top: 31px;
     }
-    .advantages-collage-video::after{
+
+    .advantages-collage-pictures::after {
         height: 120px;
         bottom: -150px;
         box-shadow: 0 0 150px 100px rgba(23, 23, 23, 1);
     }
+
     .collage-hero-section::after {
         background-image: url('../images/collageHeroBgMobile.png');
         height: 130%;

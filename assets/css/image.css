@@ -6,8 +6,13 @@
     margin-top: 114px;
 
 }
+.photo-tools-picture {
+    width: 792px;
+    height: 404px;
+    border-radius: 20px;
 
-
+}
+.photo-tools-pictures{}
 .image-hero-section::after {
     content: "";
     position: absolute;
@@ -21,12 +26,21 @@
     background-position: center;
     background-repeat: no-repeat;
 }
+.drawingImage-image-size{
+    height: 386px;
+    max-width: 590px;
+    width: 100%;
 
+
+}
 @media (max-width: 1400px) {
 }
 
 @media (max-width: 1200px) {
+    .photo-tools-picture {
+        width: 100%;
 
+    }
 
 }
 
@@ -45,7 +59,10 @@
         min-height: 736px;
         margin-top: 86px;
     }
+    .photo-tools-picture {
+        height: 220px;
 
+    }
     .image-hero-section::after {
         top: -100px;
         left: 0;
