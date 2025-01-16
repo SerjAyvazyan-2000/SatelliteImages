@@ -1,9 +1,9 @@
+gsap.registerPlugin(ScrollTrigger);
 
 
 
 
 document.addEventListener("DOMContentLoaded", () => {
-    gsap.registerPlugin(ScrollTrigger);
 
     const initAnimation = () => {
         const timeline = gsap.timeline({
@@ -170,7 +170,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
 document.addEventListener("DOMContentLoaded", () => {
-    gsap.registerPlugin(ScrollTrigger);
 
     const initAnimationUsage = () => {
         if (window.innerWidth > 1000) {
@@ -291,3 +290,10 @@ document.querySelectorAll('.example').forEach(item => {
 //
 //
 // startScrollAdvantages();
+
+
+new fullpage('#fullpage', {
+    //options here
+    autoScrolling:true,
+    scrollHorizontally: true
+});

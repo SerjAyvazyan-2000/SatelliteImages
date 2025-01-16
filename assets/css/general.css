@@ -313,6 +313,9 @@
 
 .section {
     margin-top: 160px;
+    height: 100vh; /* Каждый секшен на весь экран */
+
+
 }
 
 .hero-title {

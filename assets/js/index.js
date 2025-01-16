@@ -6,6 +6,7 @@ $(document).ready(function () {
 
 
 
+
 const burger = document.querySelector('.burger');
 const menu = document.querySelector('.menu');
 const header = document.querySelector('.header');
