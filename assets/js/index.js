@@ -538,9 +538,40 @@ if(container){
 }
 
 
-
-
-
+//
+// const sections = document.querySelectorAll('section');
+// let currentSection = 0;
+// let isScrolling = false;
+//
+// function scrollToSection(index) {
+//     if (index < 0 || index >= sections.length) return;
+//
+//     isScrolling = true;
+//     const targetPosition = sections[index].offsetTop;
+//
+//     window.scrollTo({
+//         top: targetPosition,
+//         behavior: 'smooth',
+//     });
+//
+//     setTimeout(() => {
+//         isScrolling = false;
+//     }, 1000); // Устанавливаем задержку для плавности
+// }
+//
+// // Обработчик события прокрутки колесиком мыши
+// window.addEventListener('wheel', (event) => {
+//     if (isScrolling) return;
+//
+//     if (event.deltaY > 0) {
+//         currentSection++;
+//     } else {
+//         currentSection--;
+//     }
+//
+//     scrollToSection(currentSection);
+// });
+//
 
 
 
